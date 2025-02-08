@@ -1,15 +1,27 @@
-import { useState } from 'react'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Navbar from './navbar/Navbar';
 
-function App() {
- 
-  return (
-    <>
-      <div>
-        <h1>App Component</h1>
-      </div>
-    </>
-  )
+function Home() {
+  return <h1>Home Page</h1>;
 }
 
-export default App
+function Books() {
+  return <h1>Books Page</h1>;
+}
+
+function App() {
+  return (
+    <Router>
+
+      <Navbar></Navbar>
+
+      <Routes>
+        <Route path="/" element={<Home />} />  {/* renders home when url is / */}
+        <Route path="/books" element={<Books />} />
+      </Routes>
+
+    </Router>
+  );
+}
+
+export default App;

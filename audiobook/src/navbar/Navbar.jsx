@@ -1,15 +1,17 @@
-import './Navbar.css'
+import './Navbar.css';
+import {Link} from "react-router-dom";
 
 
 function Navbar(){ // display map of world during the readings  (could later animate where they are on map?)
      
     return(
-        <div>
-            <h1>Audiobook</h1>
-            <h2>Home</h2>
-            <h2>Books</h2>
-        </div>
+        
+        <nav>
+            <Link to="/">Home</Link> {/* updates url to whatever value is specified when clicked / */}
+            <Link to="/books">Books</Link>
+        </nav>
+        
     )
 }
 
-export default Navbar
+export default Navbar;

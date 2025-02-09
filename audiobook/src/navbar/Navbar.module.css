@@ -11,6 +11,7 @@
     align-items: center;
     background-color: #24252A;
     padding: 0px 10px;
+    border-bottom: 2px solid #A39029;
 }
 
 .navbarNav{
@@ -35,13 +36,6 @@
     height: auto;
 }
 
-li, a, button {
-    font-weight: 500;
-    font-size: 25px;
-    color: #edf0f1;
-    text-decoration: none;
-}
-
 .navLinks {
     list-style: none;
 }
@@ -49,19 +43,20 @@ li, a, button {
 .navLinks li {
     display: inline-block;
     padding: 0px 30px;
+    text-decoration: none;
+    font-size: 25px;
 }
 
 .navLinks li a{
     transition: all 0.3s ease 0s;
     font-family: 'CustomFont', sans-serif;
     color: #A39029;
+    text-decoration: none;
+    font-size: 25px;
 }
-
 
 .navLinks li a:hover {
    color: #A39029;
-   text-shadow: 0.5px 0.5px 1px #00BFFF, -0.5px -0.5px 1px #00BFFF, 0.5px -0.5px 1px #00BFFF, -0.5px 0.5px 1px #00BFFF;
-   text-shadow: 0.5px 0.5px 1px #EDEF11, -0.5px -0.5px 1px #EDEF11, 0.5px -0.5px 1px #EDEF11, -0.5px 0.5px 1px #EDEF11;
    text-shadow: 0.5px 0.5px 0.5px #FF5C00, -0.5px -0.5px 0.5px #FF5C00, 0.5px -0.5px 0.5px #FF5C00, -0.5px 0.5px 0.5px #FF5C00;
    /* font-size: 25.5px; */
 }

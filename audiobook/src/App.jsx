@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Navbar from './navbar/Navbar';
+import styles from "./App.module.css";
 
 function Home() {
   return <h1>Home Page</h1>;
@@ -22,13 +23,15 @@ function App() {
     <Router>
 
       <Navbar></Navbar>
-
-      <Routes>
-        <Route path="/" element={<Home />} />  {/* renders home when url is / */}
-        <Route path="/books" element={<Books />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      
+      <div className={styles.wrapper}>
+        <Routes>
+          <Route path="/" element={<Home />} />  {/* renders home when url is / */}
+          <Route path="/books" element={<Books />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
 
     </Router>
   );

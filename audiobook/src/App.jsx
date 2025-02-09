@@ -13,6 +13,10 @@ function About() {
   return <h1>About Page</h1>;
 }
 
+function Contact() {
+  return <h1>Contact Page</h1>;
+}
+
 function App() {
   return (
     <Router>
@@ -23,6 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />  {/* renders home when url is / */}
         <Route path="/books" element={<Books />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
 
     </Router>

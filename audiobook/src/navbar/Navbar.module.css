@@ -1,22 +1,32 @@
+@font-face  {
+    font-family: 'CustomFont';
+    src: url('/fonts/RingbearerMedium-51mgZ.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .navbarHead{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #24252A;
+    padding: 0px 10px;
+}
+
+.navbarNav{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centers the nav items */
 }
 
 .navTit {
-    font-weight: 500;
-    font-size: 30px;
+    font-family: 'CustomFont', sans-serif;
+    font-weight: 400;
+    font-size: 37px;
     color: #edf0f1;
     text-decoration: none;
-}
-
-.navTit2 {
-    font-weight: 500;
-    font-size: 30px;
-    color: #edf0f1;
-    text-decoration: none;
+    padding-left: 20px;
+    color: #A39029;
 }
 
 .navLogo {
@@ -25,14 +35,9 @@
     height: auto;
 }
 
-.navLogoDiv {
-    padding: 5px;
-}
-
-
 li, a, button {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 25px;
     color: #edf0f1;
     text-decoration: none;
 }
@@ -48,8 +53,15 @@ li, a, button {
 
 .navLinks li a{
     transition: all 0.3s ease 0s;
+    font-family: 'CustomFont', sans-serif;
+    color: #A39029;
 }
 
+
 .navLinks li a:hover {
-   color: #0088a9;
+   color: #A39029;
+   text-shadow: 0.5px 0.5px 1px #00BFFF, -0.5px -0.5px 1px #00BFFF, 0.5px -0.5px 1px #00BFFF, -0.5px 0.5px 1px #00BFFF;
+   text-shadow: 0.5px 0.5px 1px #EDEF11, -0.5px -0.5px 1px #EDEF11, 0.5px -0.5px 1px #EDEF11, -0.5px 0.5px 1px #EDEF11;
+   text-shadow: 0.5px 0.5px 0.5px #FF5C00, -0.5px -0.5px 0.5px #FF5C00, 0.5px -0.5px 0.5px #FF5C00, -0.5px 0.5px 0.5px #FF5C00;
+   /* font-size: 25.5px; */
 }

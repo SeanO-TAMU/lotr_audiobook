@@ -1,0 +1,55 @@
+.navbarHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #24252A;
+}
+
+.navTit {
+    font-weight: 500;
+    font-size: 30px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.navTit2 {
+    font-weight: 500;
+    font-size: 30px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.navLogo {
+    cursor: pointer;
+    width: 90px; 
+    height: auto;
+}
+
+.navLogoDiv {
+    padding: 5px;
+}
+
+
+li, a, button {
+    font-weight: 500;
+    font-size: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.navLinks {
+    list-style: none;
+}
+
+.navLinks li {
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.navLinks li a{
+    transition: all 0.3s ease 0s;
+}
+
+.navLinks li a:hover {
+   color: #0088a9;
+}

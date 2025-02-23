@@ -5,6 +5,27 @@
   text-align: center;
 } */
 
+@font-face  {
+  font-family: 'CustomFont1';
+  src: url('/fonts/RingbearerMedium-51mgZ.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face  {
+  font-family: 'CustomFont2';
+  src: url('/fonts/HobbitonBrushhandhobbitonBrush-WygA.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face  {
+  font-family: 'CustomFont3';
+  src: url('/fonts/Theonering-Xq3d.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +37,10 @@ body {
 }
 
 .wrapper{
+  display: flex; 
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
   width: 80%; /* Adjust width as needed */
   height: 100vh;
   max-width: 1200px; /* Maximum width to prevent it from growing too wide */

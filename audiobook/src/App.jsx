@@ -1,21 +1,41 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from './home/Home'
 import Navbar from './navbar/Navbar';
+import Book from './book/Book';
 import styles from "./App.module.css";
 
-function Home() {
-  return <h1>Home Page</h1>;
+function Homepage() {
+  return (
+          <div className={styles.wrapper}>
+            <Home></Home>
+          </div>
+      );
+
 }
 
-function Books() {
-  return <h1>Books Page</h1>;
+function Bookspage() {
+  return (
+    <div className={styles.wrapper}>
+      <h1>Book Page</h1>
+      <Book></Book>
+    </div>
+  );
 }
 
-function About() {
-  return <h1>About Page</h1>;
+function Aboutpage() {
+  return (
+    <div className={styles.wrapper}>
+      <h1>About Page</h1>
+    </div>
+  );
 }
 
-function Contact() {
-  return <h1>Contact Page</h1>;
+function Contactpage() {
+  return (
+    <div className={styles.wrapper}>
+      <h1>Contact Page</h1>
+    </div>
+  );
 }
 
 function App() {
@@ -24,14 +44,12 @@ function App() {
 
       <Navbar></Navbar>
       
-      <div className={styles.wrapper}>
         <Routes>
-          <Route path="/" element={<Home />} />  {/* renders home when url is / */}
-          <Route path="/books" element={<Books />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Homepage />} />  {/* renders home when url is / */}
+          <Route path="/books" element={<Bookspage />} />
+          <Route path="/about" element={<Aboutpage />} />
+          <Route path="/contact" element={<Contactpage />} />
         </Routes>
-      </div>
 
     </Router>
   );

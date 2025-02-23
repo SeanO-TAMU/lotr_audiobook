@@ -1,0 +1,60 @@
+@font-face  {
+    font-family: 'CustomFont1';
+    src: url('/fonts/RingbearerMedium-51mgZ.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face  {
+    font-family: 'CustomFont2';
+    src: url('/fonts/HobbitonBrushhandhobbitonBrush-WygA.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face  {
+    font-family: 'CustomFont3';
+    src: url('/fonts/Theonering-Xq3d.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ /* Deep Red: #9B111E
+  Orange-Red: #FF3B00
+  Yellow-Orange: #FF6A13
+  Hot Lava Orange: #FF4500
+  Yellow: #FFBB00
+  Lava Yellow: #FDB813
+  Molten Lava Red: #D84B16
+  Dark Lava Brown: #3E2723
+  Charcoal Black: #2A2A2A 
+  my orange: #FF5C00 */
+
+
+.Title {
+    padding: 8px 5px;
+    background-color: #24252A;
+    display: inline-block;
+    text-align: center;
+    margin: 20px auto;
+    border: 3px solid #3E2723;
+  
+  }
+  
+  .Title h1 {
+    font-size: 40px;
+    font-family: 'CustomFont1', sans-serif;
+    /* color: linear-gradient(to bottom, #3E1F1C, #FF5C00); */
+    background: linear-gradient(to bottom, #A53E00, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+  }
+
+  .Title p {
+    font-size: 20px;
+    font-family: 'CustomFont2', sans-serif;
+    color:  #FF5C00;
+    text-decoration: underline solid #D84B16 2px;
+  }
+

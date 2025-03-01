@@ -19,6 +19,34 @@
     font-style: normal;
 }
 
+@font-face  {
+    font-family: 'CustomFont4';
+    src: url('/fonts/BilboHandRegular-L3MZ.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face  {
+    font-family: 'CustomFont5';
+    src: url('/fonts/BilboHandFine-gxVR.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face  {
+    font-family: 'CustomFont6';
+    src: url('/fonts/BilboHandBoldBold-X3od.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face  {
+    font-family: 'CustomFont7';
+    src: url('/fonts/PartyBusiness-4B0K.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
  /* Deep Red: #9B111E
   Orange-Red: #FF3B00
   Yellow-Orange: #FF6A13
@@ -204,26 +232,52 @@
     font-size: 22px;
 }
 
-.Book1 {
-
+.ExploreBy .NoLinkStyle1{
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    height: 100%;
     max-width: 30%;
+    border: 2px solid #FF5C00;
+}
+
+.ExploreBy .NoLinkStyle2{
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    height: 100%;
+    max-width: 33%;
+    border: 2px solid #FF5C00;
+}
+
+.ExploreBy .NoLinkStyle3{
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    height: 100%;
+    max-width: 29%;
+    border: 2px solid #FF5C00;
+}
+
+.Book1 {
     background: linear-gradient(to left, #FFBF00, #FF5C00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 5px;
 }
 
 .Book2 {
-    max-width: 31%;
     background: linear-gradient(to bottom, #FFBF00, #FF5C00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 5px;
 }
 
 .Book3 {
-    max-width: 29%;
     background: linear-gradient(to right, #FFBF00, #FF5C00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 5px;
 }
 
 .OfTheDay{
@@ -253,14 +307,17 @@
     margin-right: 10px;
     padding-bottom: 5px;
     margin-bottom: 10px;
+    font-family: 'CustomFont1', sans-serif;
+    font-size: 27px;
 }
 
 .Quote p{
-    font-size: 19px;
+    font-size: 20px;
     background: linear-gradient(to left, #FFBF00, #FF5C00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 5px;
+    /* font-family: 'CustomFont2', sans-serif; */
 }
 
 .Poem{
@@ -274,6 +331,7 @@
 }
 
 .Poem h2 {
+    font-family: 'CustomFont1', sans-serif;
     background: linear-gradient(to left, #9B111E, #FF5C00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -281,12 +339,14 @@
     margin-left: 10px;
     margin-right: 10px;
     padding-bottom: 5px;
+    font-size: 27px;
 }
 
 .Poem p {
+    /* font-family: 'CustomFont2', sans-serif; */
     background: linear-gradient(to top, #FFBF00, #FF5C00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1.8;
-    font-size: 18px;
+    font-size: 20px;
 }

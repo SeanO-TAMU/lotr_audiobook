@@ -34,6 +34,8 @@
 .Title {
     padding: 8px 5px;
     background-color: #24252A;
+    background: #3E2723;
+    background: linear-gradient(to bottom, #24252A, #3E2723);
     display: inline-block;
     text-align: center;
     margin: 20px auto;
@@ -58,3 +60,233 @@
     text-decoration: underline solid #D84B16 2px;
   }
 
+.CTADiv {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.CTA {
+    max-width: 35%;
+    text-align: center;
+    border: 3px solid #24252A;
+    padding: 5px;
+    background: #3E2723;
+    
+}
+
+.CTA h2 {
+    /* color: #FFBF00; */
+    /* color: linear-gradient(to bottom, #FFBF00, #FF5C00); */
+    font-size: 28px;
+    color: #FFBF00;
+}
+
+.CTA hr {
+    border: none;
+    border-top: 1px solid #FF4500;
+    margin: 4px 10px;
+}
+
+.CTA p {
+    background: linear-gradient(to bottom, #FFBF00, #FF5C00); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+    font-size: 18px;
+}
+
+.CTA a {
+    color: #D84B16;
+}
+
+.Bookimg {
+    margin-left: 20px; /* Add some space between the text and the image */
+}
+  
+.Bookimg img {
+    width: 200px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+    border: 3px solid #24252A;
+}
+
+.Bookinfo {
+    max-width: 30%;
+    background: #3E2723;
+    padding: 5px;
+    border: 3px solid #24252A;
+}
+
+.Bookinfo p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.bookTitle {
+    background: linear-gradient(to right, #FFBF00, #D84B16); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+}
+
+.bookAuthor {
+    background: linear-gradient(to right, #FFBF00, #D84B16); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+}
+
+.bookNarrate {
+    background: linear-gradient(to right, #FFBF00, #D84B16); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+}
+
+.bookDate {
+    background: linear-gradient(to right, #FFBF00, #D84B16); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+}
+
+.bookGenre {
+    background: linear-gradient(to right, #FFBF00, #D84B16); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+}
+
+.Explore{
+    background: #3E2723;
+    border: 3px solid #24252A;
+    margin: 25px;
+    padding-bottom: 10px;
+}
+
+.Explore h2{
+    text-align: center;
+    font-size: 30px;
+    background: linear-gradient(to right, #9B111E, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid #FF4500;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-bottom: 10px;
+}
+
+.ExploreBy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.ExploreBy h2 {
+    text-align: center;
+    padding: 8px;
+    font-size: 30px;
+    color: #9B111E;
+    
+}
+
+.ExploreBy div {
+    padding: 5px;
+    flex: 1;
+    text-align: center;
+}
+
+.ExploreBy div h3 {
+    text-decoration: underline;
+    font-size: 22px;
+}
+
+.Book1 {
+
+    max-width: 30%;
+    background: linear-gradient(to left, #FFBF00, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Book2 {
+    max-width: 31%;
+    background: linear-gradient(to bottom, #FFBF00, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Book3 {
+    max-width: 29%;
+    background: linear-gradient(to right, #FFBF00, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.OfTheDay{
+    display: flex; 
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+}
+
+.Quote{
+    max-width: 40%;
+    border: 3px solid #24252A;
+    padding: 5px;
+    background: #3E2723;
+    background: linear-gradient(to bottom, #3E2723, #24252A);
+    margin: 20px;
+}
+
+.Quote h2 {
+    text-align: center;
+    background: linear-gradient(to right, #9B111E, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid #FF4500;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.Quote p{
+    font-size: 19px;
+    background: linear-gradient(to left, #FFBF00, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5px;
+}
+
+.Poem{
+    max-width: 40%;
+    text-align: center;
+    border: 3px solid #24252A;
+    padding: 5px;
+    background: #3E2723;
+    margin: 20px;
+    background: linear-gradient(to bottom, #3E2723, #24252A);
+}
+
+.Poem h2 {
+    background: linear-gradient(to left, #9B111E, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid #FF4500;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 5px;
+}
+
+.Poem p {
+    background: linear-gradient(to top, #FFBF00, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.8;
+    font-size: 18px;
+}

@@ -51,6 +51,10 @@ function App() {
           <Route path="/contact" element={<Contactpage />} />
         </Routes>
 
+        <footer className={styles.footer}>
+            <p>Footer</p>
+        </footer>
+
     </Router>
   );
 }

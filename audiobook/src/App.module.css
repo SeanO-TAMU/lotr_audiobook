@@ -42,7 +42,7 @@ body {
   /* justify-content: center; */
   /* align-items: center; */
   width: 80%; /* Adjust width as needed */
-  height: 100vh;
+  height: 100%;
   max-width: 1200px; /* Maximum width to prevent it from growing too wide */
   margin: 0 auto; /* Centers the wrapper horizontally */
   background-color: #3E1F1C;
@@ -50,4 +50,9 @@ body {
   border-right: 1.5px solid #A39029;
   border-left: 1.5px solid #A39029;
   border-bottom: 1.5px solid #A39029;
+}
+
+.footer{
+  margin: 20px;
+  color: white;
 }

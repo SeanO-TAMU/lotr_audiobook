@@ -3,6 +3,7 @@ import Home from './home/Home'
 import Navbar from './navbar/Navbar';
 import BookPage from './book/BookPage';
 import styles from "./App.module.css";
+import Footer from "./footer/Footer";
 
 function Homepage() {
   return (
@@ -51,9 +52,11 @@ function App() {
           <Route path="/contact" element={<Contactpage />} />
         </Routes>
 
-        <footer className={styles.footer}>
+        {/* <footer className={styles.footer}>
             <p>Footer</p>
-        </footer>
+        </footer> */}
+
+        <Footer></Footer>
 
     </Router>
   );

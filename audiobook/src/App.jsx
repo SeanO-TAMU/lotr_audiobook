@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './home/Home'
 import Navbar from './navbar/Navbar';
-import Book from './book/Book';
+import BookPage from './book/BookPage';
 import styles from "./App.module.css";
 
 function Homepage() {
@@ -17,7 +17,7 @@ function Bookspage() {
   return (
     <div className={styles.wrapper}>
       <h1>Book Page</h1>
-      <Book></Book>
+      <BookPage></BookPage>
     </div>
   );
 }

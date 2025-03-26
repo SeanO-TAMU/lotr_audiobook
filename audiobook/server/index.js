@@ -21,9 +21,8 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-
 //need to use streams to load these mp3 so that we can start using them before they are fully loaded
-fs.readFile('../the_fellowship_of_the_ring/01_A_Long_Expected_Party.mp3', (err, data) => {
+fs.readFile('../library/the_fellowship_of_the_ring/01_A_Long_Expected_Party.mp3', (err, data) => {
   if (err){
       console.log(err);
   }

@@ -1,7 +1,21 @@
 import styles from "./Home.module.css";
 import {Link} from "react-router-dom";
+import { useEffect } from 'react';
+import {titleText, chapText} from '../helper.js';
+
+
 
 function Home (){
+
+    useEffect(() => {
+        
+        console.log(titleText('the_fellowship_of_the_ring'));
+
+        console.log(chapText('01_A_Long_Expected_Party.mp3'));
+
+      }, []);
+
+
     return (
         <>
             <div className={styles.Title}>

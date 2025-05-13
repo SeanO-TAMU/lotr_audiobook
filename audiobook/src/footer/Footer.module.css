@@ -1,4 +1,65 @@
-.footer{
-    margin: 20px;
+  .footer{
     color: white;
+  }
+
+  .footSectioning {
+    /* background: #24252A; */
+    padding-top: 20px;
+    background: linear-gradient(to bottom, black, #1A1A1A);
+    /* border: 20px solid black; */
+  }
+
+  .footSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footSection div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .footSection div h2 {
+    color: white;
+    padding: 10px;
+  }
+
+  .footSection div a {
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .footSection div a:hover {
+    text-decoration: underline;
+  }
+
+  .footSection div p{
+    font-size: 20px;
+    color: white;
+  }
+
+  .top {
+    padding: 7px;
+  }
+
+  .Symbol{
+    align-items: center;
+  }
+
+  .Symbol img {
+    width: 120px;
+    height: auto;
+  }
+
+  .Symbol p {
+    padding: 10px;
+  }
+
+  .extraStuff{
+    background-color: #121212;
   }

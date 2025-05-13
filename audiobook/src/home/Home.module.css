@@ -83,6 +83,7 @@
 
   .Title p {
     font-size: 20px;
+    display: inline;
     font-family: 'CustomFont2', sans-serif;
     color:  #FF5C00;
     text-decoration: underline solid #D84B16 2px;

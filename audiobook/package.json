@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2",
     "music-metadata": "^11.0.0",
     "react": "^19.0.0",

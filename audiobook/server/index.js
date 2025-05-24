@@ -2,47 +2,10 @@
 
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const fs = require('fs');
 const http = require('http');
 // import mm from 'music-metadata';
-
-const app = express();
-const PORT = 5000;
-
-// Serve static files (React app build files)
-app.use(express.static(path.join(__dirname, '../dist')));
-
-app.use((req, res, next) => {
-  console.log("New request made: ");
-  console.log("Host: ", req.hostname);
-  console.log("Path: ", req.path);
-  console.log("URL: ", req.url);
-  console.log("Method: ", req.method);
-  next();
-});
-
-async function readingDirec(filePath, indent){
-  const stats = await fs.promises.stat(filePath);
-  if(stats.isDirectory()){
-    console.log(indent + "Directory: ", filePath);
-    let filename;
-    const files = await fs.promises.readdir(filePath);
-    for(let i = 0; i < files.length; i++){
-      filename = path.join(filePath, files[i]);
-      const fileStats = await fs.promises.stat(filename);
-      if(fileStats.isDirectory()){
-        let indent2 =  indent + "  ";
-        await readingDirec(filename, indent2);
-      }
-      else{
-        console.log(indent + "Filename: ", filename);
-      }
-    }
-  }
-  else{
-    return;
-  } 
-}
 
 async function retrieveBooks(){
   let library = [];
@@ -80,6 +43,50 @@ async function retrieveChapters(book){
   return chapters;
 }
 
+const app = express();
+const PORT = 5000;
+
+app.use(cors({
+  origin: 'http://localhost:5173'
+}));
+
+// Serve static files (React app build files)
+app.use(express.static(path.join(__dirname, '../dist')));
+
+//prints the req object info
+app.use((req, res, next) => {
+  console.log("New request made: ");
+  console.log("Host: ", req.hostname);
+  console.log("Path: ", req.path);
+  console.log("URL: ", req.url);
+  console.log("Method: ", req.method);
+  next();
+});
+
+async function readingDirec(filePath, indent){
+  const stats = await fs.promises.stat(filePath);
+  if(stats.isDirectory()){
+    console.log(indent + "Directory: ", filePath);
+    let filename;
+    const files = await fs.promises.readdir(filePath);
+    for(let i = 0; i < files.length; i++){
+      filename = path.join(filePath, files[i]);
+      const fileStats = await fs.promises.stat(filename);
+      if(fileStats.isDirectory()){
+        let indent2 =  indent + "  ";
+        await readingDirec(filename, indent2);
+      }
+      else{
+        console.log(indent + "Filename: ", filename);
+      }
+    }
+  }
+  else{
+    return;
+  } 
+}
+
+//this use prints all books and the chapters to those books
 app.use(async (req, res, next) => {
   let path1 = path.dirname(__dirname);
   let path2 = path.join(path1, '/library');
@@ -94,8 +101,8 @@ app.use(async (req, res, next) => {
       console.error('Error:', err);
     });
 
-  console.log("Reading Directory Function");
-  await readingDirec(path2, "");
+  //console.log("Reading Directory Function");
+  //await readingDirec(path2, "");
 
   let library = await retrieveBooks();
   console.log(library);
@@ -118,25 +125,31 @@ app.get('/', (req, res) => {
   //res.write('Hello, World!'); // need to change header to text/plain for this to work
   res.write('<p>Hello, World!</p>');
 
-  // // routing
-  // let path = './public/';
-
-  //     path += 'responseDemo.html';
-  //     res.statusCode = 200;
-
-  // // send html
-  // fs.readFile(path, (err, data) => {
-  //   if (err) {
-  //     console.log(err);
-  //     res.end();
-  //   }
-  //   //res.write(data);
-  //   res.end(data);
-  // });
-
-
   res.end();
 
+});
+
+//handle request to get all book titles in the library
+app.get('/library', (req, res) => {
+  let books = retrieveBooks();
+  let library = [];
+  for (let i = 0; i < books.length; i++){
+    library.push({
+      title: books[i]
+      });
+  }
+
+  res.json(library);
+});
+
+//handle requests to get all chapter names in a book
+app.get('/book', (req, res) => {
+  // need query parameters for the retrieve chapters function
+});
+
+//handle requests to get the chapter mp3 file
+app.get("/chapter", (req, res) => {
+  //need query paramters to retrieve the chapter mp3/selet the right one
 });
 
 // Start the server

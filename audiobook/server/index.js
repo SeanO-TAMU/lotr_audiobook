@@ -145,11 +145,21 @@ app.get('/library', (req, res) => {
 //handle requests to get all chapter names in a book
 app.get('/book', (req, res) => {
   // need query parameters for the retrieve chapters function
+  const title = req.query.title;
+  let chapterList = retrieveChapters(title);
+  let chapters = [];
+  for(let i = 0; i < chapterList.length; i++){
+    chapters.push({
+      chapter: chapterList[i]
+    });
+  }
 });
 
 //handle requests to get the chapter mp3 file
 app.get("/chapter", (req, res) => {
   //need query paramters to retrieve the chapter mp3/selet the right one
+  const book = req.query.book;
+  const chapter = req.query.chapter;
 });
 
 // Start the server

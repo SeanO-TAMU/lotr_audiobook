@@ -153,6 +153,8 @@ app.get('/book', (req, res) => {
       chapter: chapterList[i]
     });
   }
+
+  res.json(chapters);
 });
 
 //handle requests to get the chapter mp3 file

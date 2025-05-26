@@ -130,8 +130,8 @@ app.get('/', (req, res) => {
 });
 
 //handle request to get all book titles in the library
-app.get('/library', (req, res) => {
-  let books = retrieveBooks();
+app.get('/library', async (req, res) => {
+  let books = await retrieveBooks();
   let library = [];
   for (let i = 0; i < books.length; i++){
     library.push({

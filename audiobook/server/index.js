@@ -164,6 +164,19 @@ app.get("/chapter", (req, res) => {
   const chapter = req.query.chapter;
 });
 
+app.get("/coverImage", async (req, res) => {
+  const title = req.query.title;
+
+  let filePath = path.join(path.dirname(__dirname), 'library', title, 'book_cover');
+
+   const Image = await fs.promises.readdir(filePath); //gets image file
+
+   const imagePath = path.join(filePath, Image[0]); //gets full image path
+
+   res.sendFile(imagePath, { headers: { 'Content-Type': 'image/jpeg' } });
+
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

@@ -143,10 +143,12 @@ app.get('/library', async (req, res) => {
 });
 
 //handle requests to get all chapter names in a book
-app.get('/book', (req, res) => {
+app.get('/book', async (req, res) => {
   // need query parameters for the retrieve chapters function
+
   const title = req.query.title;
-  let chapterList = retrieveChapters(title);
+  let chapterList = await retrieveChapters(title);
+
   let chapters = [];
   for(let i = 0; i < chapterList.length; i++){
     chapters.push({

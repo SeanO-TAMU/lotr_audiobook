@@ -20,7 +20,6 @@ function Bookspage() {
   return (
     <div className={styles.pageBackground}>
       <div className={styles.wrapper}>
-        <h1>Book Page</h1>
         <BookPage></BookPage>
       </div>
     </div>

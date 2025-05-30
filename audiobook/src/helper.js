@@ -24,6 +24,16 @@ export function titleText(title){
             newTitle += ' '
             capital = true;
         }
+        else if (title.at(i) == '-'){
+            newTitle += '-';
+            capital = true;
+        }
+        else if (title.at(i) == '#'){
+            newTitle += '#';
+        }
+        else if (title.at(i) == '&'){
+            newTitle += '&';
+        }
     }
 
     return newTitle;
@@ -57,6 +67,15 @@ export function chapText(title){
         }
         else if(title.at(i) == '.'){
             return newTitle;
+        }
+        else if (title.at(i) == '-'){
+            newTitle += '-';
+        }
+        else if (title.at(i) == '#'){
+            newTitle += '#';
+        }
+        else if (title.at(i) == '&'){
+            newTitle += '&';
         }
     }
 

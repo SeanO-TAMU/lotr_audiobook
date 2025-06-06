@@ -162,8 +162,37 @@ app.get('/book', async (req, res) => {
 //handle requests to get the chapter mp3 file
 app.get("/chapter", (req, res) => {
   //need query paramters to retrieve the chapter mp3/selet the right one
-  const book = req.query.book;
+  const book = req.query.title;
   const chapter = req.query.chapter;
+
+  const filePath = path.join(path.dirname(__dirname), '/library', book, chapter);
+
+  const CHUNKSIZE = 500 * 1e3;
+
+  // send audio in chunks
+  const range = req.headers.range || "0";
+  const audioSize = fs.statSync(filePath).size; //audio size
+
+  // define start and end of current chunk
+  const start = Number(range.replace(/\D/g, ""));
+  const end = Math.min(start + CHUNKSIZE, audioSize - 1);
+  const contentLength = end - start + 1;
+
+  // set headers for transfer to client
+  const headers = {
+    "Content-Range": `bytes ${start}-${end}/${audioSize}`,
+    "Accept-Ranges" : "bytes",
+    "Content-Length" : contentLength,
+    "Content-Type" : "audio/mpeg",
+    "Transfer-Encoding" : "chunked",
+  };
+
+  // write headers to response object
+  res.writeHead(206, headers);
+
+  const readStream = fs.createReadStream(filePath, { start, end });
+  readStream.pipe(res); // pipe readStream into the response
+   
 });
 
 app.get("/coverImage", async (req, res) => {

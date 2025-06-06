@@ -2,8 +2,10 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './home/Home'
 import Navbar from './navbar/Navbar';
 import BookPage from './book/BookPage';
+import AudiobookPage from './book/audiobook/AudiobookPage';
 import styles from "./App.module.css";
 import Footer from "./footer/Footer";
+import { useParams } from "react-router-dom";
 
 function Homepage() {
   return (
@@ -59,6 +61,19 @@ function Accreditationpage() {
   );
 }
 
+function Audiobookpage() {
+
+   const { title } = useParams();
+
+  return(
+    <div className={styles.pageBackground}>
+      <div className={styles.wrapper}>     
+        <AudiobookPage title={title}></AudiobookPage>
+      </div>
+    </div>
+  )
+}
+
 function App() {
   return (
     <Router>
@@ -71,6 +86,7 @@ function App() {
           <Route path="/about" element={<Aboutpage />} />
           <Route path="/contact" element={<Contactpage />} />
           <Route path="/accreditations" element={<Accreditationpage />} />
+          <Route path="/books/:title" element={<Audiobookpage />}></Route>
         </Routes>
 
         {/* <footer className={styles.footer}>

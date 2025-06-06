@@ -5,6 +5,11 @@
   text-align: center;
 } */
 
+:root{
+  --gradient-one: #3E1F1C;
+  --gradient-two: #FF5C00;
+}
+
 @font-face  {
   font-family: 'CustomFont1';
   src: url('/fonts/RingbearerMedium-51mgZ.ttf') format('truetype');
@@ -48,7 +53,7 @@
   max-width: 1200px; /* Maximum width to prevent it from growing too wide */
   margin: 0 auto; /* Centers the wrapper horizontally */
   background-color: #3E1F1C;
-  background-image: linear-gradient(to bottom, #3E1F1C, #FF5C00);
+  background-image: linear-gradient(to bottom, var(--gradient-one), var(--gradient-two));
   border-right: 1.5px solid #A39029;
   border-left: 1.5px solid #A39029;
   border-bottom: 1.5px solid #A39029;

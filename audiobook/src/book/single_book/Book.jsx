@@ -1,6 +1,7 @@
 import styles from "./Book.module.css";
 import { useEffect, useState } from "react";
 import {titleText} from "../../helper.js";
+import { useNavigate } from "react-router-dom";
 
 function useBookChapters(title){
     const [chapterList, setchapterList] = useState();
@@ -26,6 +27,7 @@ function readBook(title, chapters){ //need to make this so it can dynamically ta
 function Book ({title}){
     const [imageURL, setimageURL] = useState("");
     const [chapterList, setchapterList] = useState();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const imageLink = `http://localhost:5000/coverImage?title=${title}`;
@@ -44,6 +46,7 @@ function Book ({title}){
 
     const handleClick = async () => {
         readBook(titleText(title), chapterList);
+        navigate(`/books/${title}`);
     };
 
 

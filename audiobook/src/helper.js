@@ -42,7 +42,8 @@ export function titleText(title){
 export function chapText(title){
     var capital = true;
     var start = true;
-    var newTitle = '';
+    var newTitle = 'Chapter ';
+    var firstUnd = true;
     for(var i = 0; i < title.length; i++){
         if(isNumber(title.at(i))){
             if(title.at(i) == '0' && start){
@@ -50,7 +51,14 @@ export function chapText(title){
             }
             else{
                 newTitle += title.at(i)
+                start = false;
             }
+        }
+        else if(firstUnd && title.at(i) == '_'){
+            newTitle += ': ';
+            firstUnd = false;
+            capital = true;
+
         }
         else if(isAlphaNumeric(title.at(i))){
             if(capital){

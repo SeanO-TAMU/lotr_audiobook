@@ -86,30 +86,27 @@ async function readingDirec(filePath, indent){
   } 
 }
 
-//this use prints all books and the chapters to those books
+//this use prints all books and the chapters to those books. Just need to uncomment all the logs
 app.use(async (req, res, next) => {
   let path1 = path.dirname(__dirname);
   let path2 = path.join(path1, '/library');
-  console.log("Library path: ", path2);
-  console.log("Path1: ", path1);
+  // console.log("Library path: ", path2);
+  // console.log("Path1: ", path1);
 
   const stats = fs.promises.stat(path2)
     .then(stats => {
-    console.log(stats.isDirectory());
+    // console.log(stats.isDirectory());
     })
     .catch(err => {
       console.error('Error:', err);
     });
 
-  //console.log("Reading Directory Function");
-  //await readingDirec(path2, "");
-
   let library = await retrieveBooks();
-  console.log(library);
+  // console.log(library);
 
   for(let i = 0; i < library.length; i++){
     let chapters = await retrieveChapters(library[i])
-    console.log(chapters);
+    // console.log(chapters);
   }
   next();
 });
@@ -205,6 +202,12 @@ app.get("/coverImage", async (req, res) => {
    const imagePath = path.join(filePath, Image[0]); //gets full image path
 
    res.sendFile(imagePath, { headers: { 'Content-Type': 'image/jpeg' } });
+
+});
+
+app.get("/bookData", async (req, res) => {
+  const title = req.query.title;
+
 
 });
 

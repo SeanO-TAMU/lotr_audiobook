@@ -46,6 +46,7 @@ function Book ({title}){
 
     const handleClick = async () => {
         readBook(titleText(title), chapterList);
+        //handle theme change as well
         navigate(`/books/${title}`);
     };
 

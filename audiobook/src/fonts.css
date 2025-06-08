@@ -1,0 +1,20 @@
+@font-face  {
+  font-family: 'CustomFont1';
+  src: url('/fonts/RingbearerMedium-51mgZ.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face  {
+  font-family: 'CustomFont2';
+  src: url('/fonts/HobbitonBrushhandhobbitonBrush-WygA.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face  {
+  font-family: 'CustomFont3';
+  src: url('/fonts/Theonering-Xq3d.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

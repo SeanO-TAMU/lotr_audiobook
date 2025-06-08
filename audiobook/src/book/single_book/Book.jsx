@@ -3,22 +3,6 @@ import { useEffect, useState } from "react";
 import {titleText} from "../../helper.js";
 import { useNavigate } from "react-router-dom";
 
-function useBookChapters(title){
-    const [chapterList, setchapterList] = useState();
-
-    useEffect(() => {
-        if (!title) return;
-
-        fetch(`http://localhost:5000/book?title=${title}`)
-        .then(res => res.json())
-        .then(data => {
-            setchapterList(data);
-        })
-    }, [title]);
-
-    return chapterList;
-}
-
 function readBook(title, chapters){ //need to make this so it can dynamically take in whatever the value of the title is maybe give book attributes?
     console.log("Reading ", title);
     console.log("Chapters: ", chapters)
@@ -27,6 +11,7 @@ function readBook(title, chapters){ //need to make this so it can dynamically ta
 function Book ({title}){
     const [imageURL, setimageURL] = useState("");
     const [chapterList, setchapterList] = useState();
+    const [theme, setTheme] = useState();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -42,12 +27,22 @@ function Book ({title}){
         .then(data => {
             setchapterList(data);
         });
+
+        fetch(`http://localhost:5000/bookTheme?title=${title}`)
+        .then(res => res.json())
+        .then(data => {
+            setTheme(data.theme);
+        });
     }, [title]);
 
     const handleClick = async () => {
         readBook(titleText(title), chapterList);
-        //handle theme change as well
+
+        document.documentElement.setAttribute("data-theme", theme); //handles theme change
+
         navigate(`/books/${title}`);
+
+        document.documentElement.setAttribute("data-theme", theme); //handles theme change
     };
 
 

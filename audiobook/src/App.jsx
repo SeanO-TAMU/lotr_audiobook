@@ -92,14 +92,14 @@ function AppWrapper() {
     // Simple routing logic
     let theme = "normal"; // default
 
-    if (pathname.startsWith("/books")) {
+    if (pathname.startsWith("/books") && !pathname.startsWith("/books/")) {
       theme = "castle";
+    }
+    else if (pathname.startsWith("/books/")){ //lets book component set theme if you are in a book
+      return;
     }
     else if (pathname.startsWith("/about")){
       theme = 'forest';
-    }
-    else if (pathname.startsWith("/books/")){
-      theme = 'blue';
     }
 
     document.documentElement.setAttribute("data-theme", theme);

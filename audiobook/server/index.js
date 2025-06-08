@@ -43,6 +43,29 @@ async function retrieveChapters(book){
   return chapters;
 }
 
+async function retrieveTheme(book){
+
+  //code for reading the chapters
+  let theme;
+  let filePath = path.join(path.dirname(__dirname), '/library', book, 'data'); //path to the data directory for the book
+
+  const files = await fs.promises.readdir(filePath);
+  for(let i = 0; i < files.length; i++){
+    let filename = path.join(filePath, files[i]);
+    let fileLoc = await fs.promises.stat(filename);
+
+    if(!fileLoc.isDirectory() && path.basename(filename) === "theme.json"){ // if it is a directory or not correct filename don't retrieve data
+      const jsonData = await fs.promises.readFile(filename, 'utf-8');
+      theme = JSON.parse(jsonData);
+      console.log(theme);
+    }
+    else {
+      continue;
+    }
+  }
+  return theme
+}
+
 const app = express();
 const PORT = 5000;
 
@@ -60,6 +83,8 @@ app.use((req, res, next) => {
   console.log("Path: ", req.path);
   console.log("URL: ", req.url);
   console.log("Method: ", req.method);
+
+
   next();
 });
 
@@ -205,10 +230,11 @@ app.get("/coverImage", async (req, res) => {
 
 });
 
-app.get("/bookData", async (req, res) => {
+app.get("/bookTheme", async (req, res) => {
   const title = req.query.title;
+  let themeOBJ = await retrieveTheme(title);
 
-
+  res.json(themeOBJ);
 });
 
 // Start the server

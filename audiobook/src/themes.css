@@ -3,12 +3,6 @@
   --gradient-two: #FF5C00;
 }
 
-[data-theme="blue"]{
-  --gradient-one: blue;
-  --gradient-two: cyan;
-
-}
-
 [data-theme="forest"]{
   /* Rolling Hills */
   --gradient-one: #7cb518;
@@ -20,3 +14,20 @@
 --gradient-one: #686868;
 --gradient-two: #3b3b3b;
 }
+
+[data-theme="blue"]{
+  --gradient-one: blue;
+  --gradient-two: cyan;
+
+}
+
+[data-theme="green"]{
+  --gradient-one: #7cb518;
+  --gradient-two: #3e6b32;
+}
+
+[data-theme="red"]{
+  --gradient-one: red;
+  --gradient-two: orange;
+}
+

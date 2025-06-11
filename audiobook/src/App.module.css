@@ -22,8 +22,8 @@
   background-color: #3E1F1C;
   background-image: var(--image-background, linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)));
   background-repeat: repeat;
-  background-size: auto;
-  /* background-size: 60% 60%; */
+  /* background-size: auto; */
+  background-size: var(--bg-size);
   border-right: 1.5px solid #A39029;
   border-left: 1.5px solid #A39029;
   border-bottom: 1.5px solid #A39029;

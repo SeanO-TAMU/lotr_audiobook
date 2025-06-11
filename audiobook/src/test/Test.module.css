@@ -1,0 +1,43 @@
+.div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+    /* overflow-x: hidden;
+    overflow-y: visible; */
+    /* overflow: hidden visible; */
+}
+
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: black;
+    background-image:  url('/images/lavaRock2.jpg');;
+    transform: translate(85%, 60%);
+    z-index: 1;
+}
+
+.curve::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: yellow;
+    transform: translate(-4%, 40%);
+    z-index: 0;
+}

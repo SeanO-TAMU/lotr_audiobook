@@ -3,6 +3,13 @@
   --gradient-two: #FF5C00;
 }
 
+[data-theme="lava"]{
+  --image-background: url('/images/lava.jpg');
+  --bg-size: 50% 50%;
+  --gradient-one: #3E1F1C;
+  --gradient-two: #FF5C00;
+}
+
 [data-theme="forest"]{
   /* Rolling Hills */
   --gradient-one: #7cb518;
@@ -11,6 +18,7 @@
 
 [data-theme="castle"]{
 --image-background: url('/images/stonewall.jpg');
+--bg-size: 100% 100%;
 --gradient-one: #686868;
 --gradient-two: #3b3b3b;
 }
@@ -18,16 +26,19 @@
 [data-theme="blue"]{
   --gradient-one: blue;
   --gradient-two: cyan;
+  --text-color: black;
 
 }
 
 [data-theme="green"]{
   --gradient-one: #7cb518;
   --gradient-two: #3e6b32;
+  --text-color: black;
 }
 
 [data-theme="red"]{
   --gradient-one: red;
   --gradient-two: orange;
+  --text-color: black;
 }
 

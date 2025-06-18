@@ -276,7 +276,7 @@
     background-repeat: no-repeat;
     background-position: center;
     font-weight: bold;
-    color:  yellow;
+    color:  #FFD700;
 }
 
 .team h2{
@@ -297,7 +297,7 @@
 }
 
 .team a{
-    color:  yellow;
+    color:  #FFD700;
 }
 
 .team a:hover{
@@ -315,7 +315,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color:  yellow;
+    color:  #FFD700;
     font-weight: bold; 
 }
 

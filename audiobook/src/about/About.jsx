@@ -17,7 +17,7 @@ function About(){
                 <img className={styles.cloud2} src="/images/cloud4.png"/>
                 <div className={styles.mission}>
                     <h2>Our Mission</h2>
-                    <p>Welcome to our immersive audiobook journey through Middle-earth. Our mission is to bring J.R.R. Tolkien’s timeless works to life through high-quality, accessible audio experiences. Whether you’re a lifelong fan or a first-time adventurer, we invite you to step into a world of hobbits, heroes, and high adventure.</p>    
+                    <p>Welcome to my immersive audiobook journey through Middle-earth. My mission is to bring J.R.R. Tolkien’s timeless works to life through high-quality, accessible audio experiences. Whether you’re a lifelong fan or a first-time adventurer, I invite you to step into a world of hobbits, heroes, and high adventure.</p>    
                 </div>
                 <div className={styles.offer}> 
                     <h2>What We Offer</h2>

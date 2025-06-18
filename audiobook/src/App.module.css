@@ -8,6 +8,8 @@
 .pageBackground {
   width: 100%;
   background: linear-gradient(to bottom, #24252A, black);
+  position: relative;
+  overflow: hidden;
 }
 
 .wrapper{
@@ -27,4 +29,6 @@
   border-right: 1.5px solid #A39029;
   border-left: 1.5px solid #A39029;
   border-bottom: 1.5px solid #A39029;
+  overflow: hidden;
+  position: relative;
 }

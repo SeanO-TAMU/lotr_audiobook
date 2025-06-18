@@ -11,9 +11,18 @@
 }
 
 [data-theme="forest"]{
-  /* Rolling Hills */
   --gradient-one: #7cb518;
   --gradient-two: #3e6b32;
+}
+
+[data-theme="sky"]{
+  --gradient-one: #87CEEB;
+  --gradient-two: #00BFFF;
+}
+
+[data-theme="nightsky"]{
+  --gradient-one: #0b1d51;
+  --gradient-two: #3b1e5e;
 }
 
 [data-theme="castle"]{
@@ -27,7 +36,6 @@
   --gradient-one: blue;
   --gradient-two: cyan;
   --text-color: black;
-
 }
 
 [data-theme="green"]{
@@ -40,5 +48,11 @@
   --gradient-one: red;
   --gradient-two: orange;
   --text-color: black;
+}
+
+[data-theme="navy"]{
+  --gradient-one: navy;
+  --gradient-two: navy;
+  --text-color: white;
 }
 

@@ -5,12 +5,10 @@
     align-items: center;
     min-height: 400px;
     padding: 100px 20vw;
-    /* overflow-x: hidden;
-    overflow-y: visible; */
-    /* overflow: hidden visible; */
+    color: var(--text-color);
 }
 
-.curve {
+/* .curve {
     position: absolute;
     height: 225px;
     width: 100%;
@@ -40,4 +38,23 @@
     background-color: yellow;
     transform: translate(-4%, 40%);
     z-index: 0;
+} */
+
+.bubble{
+    position: relative;
+    height: 600px;
+    width: 100%;
+}
+
+.bubble::after{
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    height: 85%;
+    width: 100%;
+    background-color: red;
+    z-index: -1;
+
 }

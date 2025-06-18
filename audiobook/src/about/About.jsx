@@ -35,25 +35,20 @@ function About(){
                 <div className={styles.mound}>
                     <div className={styles.exist}>
                         <h2>Why This Project Exists</h2>
-                        <p>This project was born out of a passion for Tolkien’s legendarium and a desire to create an audiobook experience that honors the depth, beauty, and detail of his world. As fans ourselves, we noticed a lack of accessible, well-organized, and legally available audio content that captured the epic scale of The Lord of the Rings.</p>
+                        <p>This project was born out of a passion for Tolkien’s legendarium and a desire to create an audiobook experience that honors the depth, beauty, and detail of his world. As a fan, I noticed a lack of accessible, well-organized, and legally available audio content that captured the epic scale of The Lord of the Rings.</p>
                     </div>
                     <div className={styles.made}>
                         <h2>How It's Made</h2>
-                        <p>Each audiobook chapter is:</p>
-                        <ul>
-                            <li> Narrated by voice actors</li>
-                            <li> Enhanced with music inspired by Middle-earth</li>
-                            <li> Edited for clarity and pacing</li>
-                            <li> Designed to align closely with the tone and language of Tolkien’s original text</li>
-                        </ul>
+                        <p>Each audiobook chapter is narrated by voice actors, enhanced with music inspired by Middle-earth, edited for clarity and pacing and designed to align closely with the tone and language of Tolkien’s original text</p>
                     </div>
                 </div>
                 <div className={styles.mound}></div>
                 <div className={styles.mound}></div>
                 <div className={styles.moundBase}></div>
                 <div className={styles.moundBase}></div>
-                <img className={styles.img1} src="/images/grassBorder.png"></img>
-                <img className={styles.img2} src="/images/grassBorder.png"></img>
+                <img className={styles.grass1} src="/images/grassBorder.png"></img>
+                <img className={styles.grass2} src="/images/grassBorder.png"></img>
+                <img className={styles.tree} src="/images/oakTree.png"></img>
                 <div className={styles.door} onClick={() => {navigate('/books')}}></div>
                 <div className={styles.window}></div>
             </div>

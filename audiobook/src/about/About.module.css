@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    min-height: 600px;
+    min-height: 900px;
     height: auto;
     position: relative;
     flex-wrap: wrap;
@@ -91,10 +91,10 @@
     position: relative;
     height: 600px;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
 }
 
-.hobbit .img1{
+.grass1{
     position: absolute;
     z-index: 3;
     width: 50%;
@@ -103,7 +103,7 @@
     bottom: 0;
 }
 
-.hobbit .img2{
+.grass2{
     position: absolute;
     z-index: 3;
     width: 50%;
@@ -111,6 +111,15 @@
     object-fit: fill;
     bottom: 0;
     right: 0;
+}
+
+.tree{
+    position: absolute;
+    width: 550px;
+    height: auto;
+    z-index: 1;
+    bottom: 390px;
+    left: 50px;
 }
 
 .mound {
@@ -176,6 +185,11 @@
     max-width: 50%;
     text-align: center;
     top: 8vh;
+    border: 5px dotted darkgreen;
+}
+
+.exist p{
+    font-size: 18px;
 }
 
 .door {
@@ -218,9 +232,10 @@
     margin: 10px;
     padding: 1px;
     z-index: 3;  
-    max-width: 33%;
+    max-width: 32.5%;
     left: 2vw;
     bottom: 6vh;
+    border: 5px dotted darkgreen;
 }
 
 .made h2{
@@ -261,7 +276,7 @@
     background-repeat: no-repeat;
     background-position: center;
     font-weight: bold;
-    color: #4B0082;
+    color:  yellow;
 }
 
 .team h2{
@@ -281,6 +296,10 @@
     background-color: rgba(80, 125, 42, 0.7);
 }
 
+.team a{
+    color:  yellow;
+}
+
 .team a:hover{
     color: #800020;
 }
@@ -296,7 +315,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: #4B0082;
+    color:  yellow;
     font-weight: bold; 
 }
 

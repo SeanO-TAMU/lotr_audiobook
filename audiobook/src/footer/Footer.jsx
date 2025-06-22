@@ -29,7 +29,7 @@ function Footer(){
                         <a href="/">Home</a> 
                         <a href="/about">About</a> 
                         <a href="/books">Books</a> 
-                        <a href='/accreditations'>Accreditations</a>
+                        <a href='/credits'>Credits</a>
                         
                     </div>
                     <div className={styles.Extra}>

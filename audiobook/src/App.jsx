@@ -8,7 +8,7 @@ import TestPage from './test/Test';
 import AboutPage from './about/About';
 import styles from "./App.module.css";
 import Footer from "./footer/Footer";
-import Accreditation from "./accreditations/Accreditations";
+import Credit from "./credits/Credit";
 import './themes.css';
 import './fonts.css';
 
@@ -58,11 +58,11 @@ function Contactpage() {
   );
 }
 
-function Accreditationpage() {
+function Creditpage() {
   return (
     <div className={styles.pageBackground}>
       <div className={styles.wrapper}>
-        <Accreditation></Accreditation>
+        <Credit></Credit>
       </div>
     </div>
   );
@@ -112,7 +112,7 @@ function AppWrapper() {
     else if (pathname.startsWith("/test")){
       theme = 'navy';
     }
-    else if (pathname.startsWith("/accreditations")){
+    else if (pathname.startsWith("/credit")){
       theme = 'stars'
     }
 
@@ -129,7 +129,7 @@ function AppWrapper() {
           <Route path="/books" element={<Bookspage />} />
           <Route path="/about" element={<Aboutpage />} />
           <Route path="/contact" element={<Contactpage />} />
-          <Route path="/accreditations" element={<Accreditationpage />} />
+          <Route path="/credits" element={<Creditpage />} />
           <Route path="/books/:title" element={<Audiobookpage />}></Route>
           <Route path="/test" element={<Testpage />} />
         </Routes>

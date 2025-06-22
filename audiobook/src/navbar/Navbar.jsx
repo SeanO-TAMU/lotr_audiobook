@@ -17,7 +17,7 @@ function Navbar(){ // display map of world during the readings  (could later ani
                     <li><Link to="/">Home</Link></li> {/* updates url to whatever value is specified when clicked / */}
                     <li><Link to="/books">Books</Link></li>
                     <li><Link to="/about">About</Link></li>
-                    <li><Link to="/accreditations">Accreditations</Link></li>
+                    <li><Link to="/credits">Credits</Link></li>
                 </ul>
             </nav>
         </header>

@@ -8,6 +8,7 @@ import TestPage from './test/Test';
 import AboutPage from './about/About';
 import styles from "./App.module.css";
 import Footer from "./footer/Footer";
+import Accreditation from "./accreditations/Accreditations";
 import './themes.css';
 import './fonts.css';
 
@@ -61,9 +62,7 @@ function Accreditationpage() {
   return (
     <div className={styles.pageBackground}>
       <div className={styles.wrapper}>
-        <h1>Accreditation Page</h1>
-        <p>Accreditations: Credit artists as well as phil dragesh and also howard shore if music is used. Artists such as karl fitzgerald and matt ferguson as well as others -- use reverse image search -- .</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <Accreditation></Accreditation>
       </div>
     </div>
   );
@@ -112,6 +111,9 @@ function AppWrapper() {
   }
     else if (pathname.startsWith("/test")){
       theme = 'navy';
+    }
+    else if (pathname.startsWith("/accreditations")){
+      theme = 'stars'
     }
 
     document.documentElement.setAttribute("data-theme", theme);

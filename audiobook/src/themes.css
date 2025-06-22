@@ -25,6 +25,11 @@
   --gradient-two: #3b1e5e;
 }
 
+[data-theme="stars"]{
+  --gradient-one: black;
+  --gradient-two: black;
+}
+
 [data-theme="castle"]{
 --image-background: url('/images/stonewall.jpg');
 --bg-size: 100% 100%;

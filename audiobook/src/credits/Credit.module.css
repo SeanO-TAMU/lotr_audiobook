@@ -1,3 +1,80 @@
-.draft{
+.credit{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.credit h1{
+    width: 100%;
+    text-align: center;
+    color: #191970;
+    padding: 20px;
+    font-size: 45px;
+    text-shadow: 0px 0px 10px #FF00FF, 
+                 0px 0px 20px #FF00FF,
+                 0px 0px 40px #FF00FF,
+                 0px 0px 80px #FF00FF;
+
+    text-shadow: 0px 0px 12px #9400D3, 
+                 0px 0px 24px #9400D3,
+                 0px 0px 48px #9400D3,
+                 0px 0px 96px #9400D3;
+}
+
+.credit div{
+    max-width: 40vw;
+    text-align: center;
+}
+
+.credit h2{
+    font-size: 30px;
+    color: #00FFAB;
+    text-shadow: 0px 0px 10px #00FFAB, 
+                 0px 0px 20px #00FFAB,
+                 0px 0px 40px #00FFAB,
+                 0px 0px 80px #00FFAB;
+}
+
+.credit p{
+    font-size: 18px;
+    color: #7DF9FF;
+    text-shadow: 0px 0px 10px #7DF9FF, 
+                 0px 0px 20px #7DF9FF,
+                 0px 0px 40px #7DF9FF,
+                 0px 0px 80px #7DF9FF;
+
+    text-shadow: 0px 0px 10px #AEEEEE, 
+                 0px 0px 20px #AEEEEE,
+                 0px 0px 40px #AEEEEE,
+                 0px 0px 80px #AEEEEE;
+}
+
+.phil{
     color: white;
+    padding: 20px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.shore{
+    color: white;
+    padding: 20px;
+    margin-left: 35vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.art{
+    color: white;
+    padding: 20px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.tolkien{
+    color: white;
+    padding: 20px;
+    margin-left: 35vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
 }

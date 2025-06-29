@@ -125,7 +125,7 @@ function AppWrapper() {
       <Navbar></Navbar>
       
         <Routes>
-          <Route path="/" element={<Homepage />} />  {/* renders home when url is / */}
+          <Route path="/" element={<Homepage />} />
           <Route path="/books" element={<Bookspage />} />
           <Route path="/about" element={<Aboutpage />} />
           <Route path="/contact" element={<Contactpage />} />

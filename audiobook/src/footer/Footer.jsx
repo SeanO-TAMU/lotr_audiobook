@@ -3,6 +3,7 @@ import styles from "./Footer.module.css";
 
 function Footer(){
     // Mea govannen! = well met in Sindarin
+    // Aurë entuluva! (Q. ˈDay shall come againˈ)
     return(
         <footer className={styles.footer}>
             <div className={styles.footSectioning}>

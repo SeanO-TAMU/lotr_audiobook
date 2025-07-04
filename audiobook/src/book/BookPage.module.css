@@ -4,3 +4,8 @@
     flex-wrap: wrap;
     padding: 8px;
 }
+
+.pageTit{
+    font-size: 45px;
+    text-align: center;
+}

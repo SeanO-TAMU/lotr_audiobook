@@ -13,22 +13,26 @@ function About(){
         <>
             <h1 className={styles.title}>About Us</h1>
             <div className={styles.sky}>
-                <img className={styles.cloud1} src="/images/cloud3.png"/>
-                <img className={styles.cloud2} src="/images/cloud4.png"/>
-                <div className={styles.mission}>
-                    <h2>Our Mission</h2>
-                    <p>Welcome to my immersive audiobook journey through Middle-earth. My mission is to bring J.R.R. Tolkien’s timeless works to life through high-quality, accessible audio experiences. Whether you’re a lifelong fan or a first-time adventurer, I invite you to step into a world of hobbits, heroes, and high adventure.</p>    
+                <div className={styles.missionBox}>
+                    <img className={styles.cloud1} src="/images/cloud3.png"/>
+                    <div className={styles.mission}>
+                        <h2>Our Mission</h2>
+                        <p>Welcome to my immersive audiobook journey through Middle-earth. My mission is to bring J.R.R. Tolkien’s timeless works to life through high-quality, accessible audio experiences. Whether you’re a lifelong fan or a first-time adventurer, I invite you to step into a world of hobbits, heroes, and high adventure.</p>    
+                    </div>
                 </div>
-                <div className={styles.offer}> 
-                    <h2>What We Offer</h2>
-                    <p>We provide a carefully curated collection of Lord of the Rings audiobook recordings, enhanced with:</p>
-                    <ul>
-                        <li>Professional narration</li>
-                        <li>Thematic background music</li>
-                        <li>Chapter navigation</li>
-                        <li>High-fidelity audio</li>
-                    </ul>
-                    <p>We aim to preserve Tolkien’s vision while making it easier to experience his work anywhere, anytime.</p>
+                <div className={styles.offerBox}>
+                    <img className={styles.cloud2} src="/images/cloud4.png"/>
+                    <div className={styles.offer}> 
+                        <h2>What We Offer</h2>
+                        <p>We provide a carefully curated collection of Lord of the Rings audiobook recordings, enhanced with:</p>
+                        <ul>
+                            <li>Professional narration</li>
+                            <li>Thematic background music</li>
+                            <li>Chapter navigation</li>
+                            <li>High-fidelity audio</li>
+                        </ul>
+                        <p>We aim to preserve Tolkien’s vision while making it easier to experience his work anywhere, anytime.</p>
+                    </div>
                 </div>
             </div>
             <div className={styles.hobbit}>

@@ -3,31 +3,23 @@ import {Link} from "react-router-dom";
 import { useEffect } from 'react';
 import {titleText, chapText} from '../helper.js';
 
-
+ 
 
 function Home (){
-
-    useEffect(() => {
-        
-        console.log(titleText('the_fellowship_of_the_ring'));
-
-        console.log(chapText('01_A_Long_Expected_Party.mp3'));
-
-      }, []);
 
 
     return (
         <>
             <div className={styles.Title}>
                 <h1>The One Audiobook Library to Rule Them All</h1>
-                <Link to="/books"><p>A Journey Through Middle-Earth in Audiobook Form</p></Link>
+                <Link to="/books" className={styles.linkNoUnder}><p>A Journey Through Middle-Earth in Audiobook Form</p></Link>
             </div>
             <div className={styles.CTADiv}>
                 <div className={styles.CTA}>
                     {/* could add a rotating image next to this of each book in the library that can be clicked to take you to that book
                             the call to action can go on the left side */}
                     <h2>Embark on a Journey Through Middle-Earth</h2>
-                    <hr></hr>
+                    {/* <hr></hr> */}
                     <p>Dive into the world of J.R.R. Tolkien’s timeless masterpieces, from The Hobbit to The Lord of the Rings and more, all in audiobook form.</p>
                     {/* <Link to="/books">Books</Link> */}
                     <Link to="/books">Start Listening Now</Link>
@@ -36,7 +28,7 @@ function Home (){
                     <Link to="/books"><img src="/images/fellowship_cover.jpg"></img></Link>
                 </div>
                 <div className={styles.Bookinfo}>
-                        <p className={styles.bookTitle}><strong>Title:</strong> The Lord of the Rings The Fellowship of the Ring</p>
+                        <p className={styles.bookTitle}><strong>Title:</strong> The Lord of the Rings: The Fellowship of the Ring</p>
                         <p className={styles.bookAuthor}><strong>Author:</strong> J.R.R Tolkien</p>
                         <p className={styles.bookNarrate}><strong>Narrated by:</strong> Phil Dragash</p>
                         <p className={styles.bookDate}><strong>Release Date:</strong> 1954</p>

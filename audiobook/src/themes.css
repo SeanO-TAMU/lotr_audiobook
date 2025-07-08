@@ -1,6 +1,8 @@
 :root{
-  --gradient-one: #3E1F1C;
-  --gradient-two: #FF5C00;
+  /* --gradient-one: #3E1F1C;
+  --gradient-two: #FF5C00; */
+  --gradient-one: black;
+  --gradient-two: black;
 }
 
 [data-theme="lava"]{
@@ -26,10 +28,10 @@
 }
 
 [data-theme="stars"]{
-  --image-background: url('/images/starry5.jpeg');
-  --bg-size: 90% 90%;
   --gradient-one: black;
   --gradient-two: black;
+  --image-background: url('/images/starry5.jpeg');
+  --bg-size: 90% 90%;
 }
 
 [data-theme="castle"]{

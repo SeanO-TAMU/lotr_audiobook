@@ -21,7 +21,7 @@
   height: 100%;
   max-width: 1200px; /* Maximum width to prevent it from growing too wide */
   margin: 0 auto; /* Centers the wrapper horizontally */
-  background-color: #3E1F1C;
+  background-color: black;
   background-image: var(--image-background, linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)));
   background-repeat: repeat;
   /* background-size: auto; */

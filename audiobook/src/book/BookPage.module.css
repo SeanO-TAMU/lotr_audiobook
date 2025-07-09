@@ -1,3 +1,10 @@
+@font-face  {
+    font-family: 'CustomFont1';
+    src: url('/fonts/RingbearerMedium-51mgZ.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .Books {
     display: flex;
     justify-content: center;
@@ -8,4 +15,6 @@
 .pageTit{
     font-size: 45px;
     text-align: center;
+    font-family: 'CustomFont1', sans-serif;
+    color: #F8F8F2;
 }

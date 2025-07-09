@@ -26,7 +26,7 @@ function BookPage (){
     return (
         <>
             <div className={styles.Title}>
-                <h1 className={styles.pageTit}>Library: A Journey Through Middle-Earth in Audiobook Form</h1>
+                <h1 className={styles.pageTit}>Archive&#223; oF Mina&#223; Tirith</h1>
                 <div className={styles.Books}>
                     {library.map(book => <Book key={book.title} title={book.title}></Book>)}
                 </div>

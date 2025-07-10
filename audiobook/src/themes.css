@@ -44,18 +44,40 @@
 [data-theme="blue"]{
   --gradient-one: blue;
   --gradient-two: cyan;
+  --image-background: url('/images/blueTile.png');
+  --bg-size: 40% 40%;
   --text-color: black;
 }
 
 [data-theme="green"]{
   --gradient-one: #7cb518;
   --gradient-two: #3e6b32;
+  --image-background: url('/images/greenTile.png');
+  --bg-size: 40% 40%;
   --text-color: black;
 }
 
-[data-theme="red"]{
+[data-theme="orange"]{
   --gradient-one: red;
   --gradient-two: orange;
+  --image-background: url('/images/orangeTile.png');
+  --bg-size: 40% 40%;
+  --text-color: black;
+}
+
+[data-theme="yellow"]{
+  --gradient-one: yellow;
+  --gradient-two: orange;
+  --image-background: url('/images/yellowTile.png');
+  --bg-size: 40% 40%;
+  --text-color: black;
+}
+
+[data-theme="purple"]{
+  --gradient-one: purple;
+  --gradient-two: rgb(56, 1, 56);
+  --image-background: url('/images/purpleTile.png');
+  --bg-size: 40% 40%;
   --text-color: black;
 }
 

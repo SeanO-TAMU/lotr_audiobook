@@ -53,8 +53,13 @@
   --gradient-one: #7cb518;
   --gradient-two: #3e6b32;
   --image-background: url('/images/greenTile.png');
+  --chapter-background: url('/images/grassTexture1.webp');
+  --play-circle: url('/images/play_circle_green.png');
+  --play-background: #B57EDCA6;
   --bg-size: 40% 40%;
-  --text-color: black;
+  --text-color: #B57EDC;   
+  --hover-color: #FF4FF8;
+  --border-color: #A0522D;
 }
 
 [data-theme="orange"]{

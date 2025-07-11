@@ -52,7 +52,7 @@ function AudiobookPage({title}){
                 {chapterList.map((item, index) => 
                 <div key={index} className={styles.Chapter} onClick={() => handleClick(item.chapter)}>
                     <p>{chapText(item.chapter)}</p>
-                    <img src="/images/play_circle.png"></img>
+                    <div className={styles.imgDiv}></div>
                 </div>
                 )}
             </div>

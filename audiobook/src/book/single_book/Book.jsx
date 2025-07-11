@@ -11,7 +11,6 @@ function readBook(title, chapters){ //need to make this so it can dynamically ta
 function Book ({title}){
     const [imageURL, setimageURL] = useState("");
     const [chapterList, setchapterList] = useState();
-    const [theme, setTheme] = useState();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -27,22 +26,11 @@ function Book ({title}){
         .then(data => {
             setchapterList(data);
         });
-
-        fetch(`http://localhost:5000/bookTheme?title=${title}`)
-        .then(res => res.json())
-        .then(data => {
-            setTheme(data.theme);
-        });
     }, [title]);
 
     const handleClick = async () => {
         readBook(titleText(title), chapterList);
-
-        document.documentElement.setAttribute("data-theme", theme); //handles theme change
-
         navigate(`/books/${title}`);
-
-        document.documentElement.setAttribute("data-theme", theme); //handles theme change
     };
 
 

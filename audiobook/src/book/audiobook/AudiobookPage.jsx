@@ -29,6 +29,7 @@ function AudiobookPage({title}){
     const [chapterList, setchapterList] = useState([]);
     const [showPopup, setshowPopup] = useState(false);
     const [popupChapter, setpopupChapter] = useState("");
+    const [theme, setTheme] = useState();
 
     useEffect(() => {
 
@@ -36,7 +37,14 @@ function AudiobookPage({title}){
         .then(res => res.json())
         .then(data => {
             setchapterList(data);
-        })
+        });
+
+         fetch(`http://localhost:5000/bookTheme?title=${title}`)
+        .then(res => res.json())
+        .then(data => {
+            setTheme(data.theme);
+            document.documentElement.setAttribute("data-theme", data.theme);
+        });
     }, [title]);
 
     function handleClick(chapter){

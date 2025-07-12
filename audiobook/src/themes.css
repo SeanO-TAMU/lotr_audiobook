@@ -45,8 +45,10 @@
   --gradient-one: blue;
   --gradient-two: cyan;
   --image-background: url('/images/blueTile.png');
-  --bg-size: 40% 40%;
+  --bg-size: 50% 50%;
+  --bg-size2: 30% auto;
   --text-color: black;
+  --border-color: black;
 }
 
 [data-theme="green"]{
@@ -71,12 +73,6 @@
   --bg-size: 40% 40%;
   --bg-size2: 20% auto;
   --text-color: #ffc300;
-  /* color: #ffdab9;
-    text-shadow:
-        0 0 3px #ff8c00,
-        0 0 6px #ff4500,
-        0 0 12px #dc143c,
-        0 0 24px #800000; */
   --border-color: #ffc300;
   --box-shad1: #ff5733;
   --box-shad2: #c70039;
@@ -102,6 +98,20 @@
   --bg-size: 40% 40%;
   --text-color: black;
 }
+
+[data-theme="grey"]{
+  --gradient-one: grey;
+  --gradient-two: grey;
+  --image-background: url('/images/greyTile.png');
+  --play-circle: url('/images/play_circle_grey.png');
+  --chapter-background: url('/images/stonewallTexture1.png');
+  --bg-size: 50% 50%;
+  --bg-size2: 30% auto;
+  --text-color: #A4592A;;
+  --hover-color: #8B4513;
+  --border-color: #A0522D;
+}
+
 
 [data-theme="navy"]{
   --gradient-one: navy;

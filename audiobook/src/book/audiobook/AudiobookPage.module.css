@@ -3,6 +3,11 @@
     font-size: 40px;
     text-align: center;
     color: var(--hover-color);
+    text-shadow:
+        -0.75px -0.75px 0 #000,
+        0.75px -0.75px 0 #000,
+        -0.75px  0.75px 0 #000,
+        0.75px  0.75px 0 #000;
 }
 
 .ChapterList{
@@ -19,7 +24,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40vw;
+    width: 44vw;
     border: 3px solid var(--border-color);
     border-radius: 20px;
     color: var(--text-color);
@@ -27,8 +32,11 @@
     background-image: var(--chapter-background);
     background-size: var(--bg-size2);
     background-repeat: repeat;
-    /* border: 2px solid white; */
-    /* background-color: yellow; */
+    box-shadow:
+        0 0 6px var(--box-shad1),
+        0 0 12px var(--box-shad1),
+        0 0 24px var(--box-shad1),
+        0 0 48px var(--box-shad1);
 }
 
 .Chapter:hover{
@@ -52,8 +60,6 @@
 .imgDiv{
     width: 30px;
     height: 30px;
-    background-color: rgba(181, 126, 220, 0.3);
-    background-color: var(--play-background);
     border-radius: 50%;
     background-image: var(--play-circle);
     background-size: contain;

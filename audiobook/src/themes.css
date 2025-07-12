@@ -66,14 +66,30 @@
   --gradient-one: red;
   --gradient-two: orange;
   --image-background: url('/images/orangeTile.png');
+  --chapter-background: url('/images/lavaRocks3.jpg');
+  --play-circle: url('/images/play_circle_orange.png');
   --bg-size: 40% 40%;
-  --text-color: black;
+  --bg-size2: 20% auto;
+  --text-color: #ffc300;
+  /* color: #ffdab9;
+    text-shadow:
+        0 0 3px #ff8c00,
+        0 0 6px #ff4500,
+        0 0 12px #dc143c,
+        0 0 24px #800000; */
+  --border-color: #ffc300;
+  --box-shad1: #ff5733;
+  --box-shad2: #c70039;
+  --box-shad3: #900c3f;
+  --box-shad4: #581845;
+  --hover-color: #ff8c00;
 }
 
 [data-theme="yellow"]{
   --gradient-one: yellow;
   --gradient-two: orange;
   --image-background: url('/images/yellowTile.png');
+  --play-circle: url('/images/play_circle_black.png');
   --bg-size: 40% 40%;
   --text-color: black;
 }
@@ -82,6 +98,7 @@
   --gradient-one: purple;
   --gradient-two: rgb(56, 1, 56);
   --image-background: url('/images/purpleTile.png');
+  --play-circle: url('/images/play_circle_black.png');
   --bg-size: 40% 40%;
   --text-color: black;
 }

@@ -45,7 +45,7 @@
   --gradient-one: blue;
   --gradient-two: cyan;
   --image-background: url('/images/blueTile.png');
-  --bg-size: 50% 50%;
+  --bg-size: 600px 600px;
   --bg-size2: 30% auto;
   --text-color: black;
   --border-color: black;
@@ -58,7 +58,7 @@
   --chapter-background: url('/images/grassTexture1.webp');
   --play-circle: url('/images/play_circle_green.png');
   --play-background: #B57EDCA6;
-  --bg-size: 40% 40%;
+  --bg-size: 600px 600px;
   --text-color: #B57EDC;   
   --hover-color: #FF4FF8;
   --border-color: #A0522D;
@@ -70,7 +70,7 @@
   --image-background: url('/images/orangeTile.png');
   --chapter-background: url('/images/lavaRocks3.jpg');
   --play-circle: url('/images/play_circle_orange.png');
-  --bg-size: 40% 40%;
+  --bg-size: 600px 600px;
   --bg-size2: 20% auto;
   --text-color: #ffc300;
   --border-color: #ffc300;
@@ -86,7 +86,7 @@
   --gradient-two: orange;
   --image-background: url('/images/yellowTile.png');
   --play-circle: url('/images/play_circle_black.png');
-  --bg-size: 40% 40%;
+  --bg-size: 600px 600px;
   --text-color: black;
 }
 
@@ -95,7 +95,7 @@
   --gradient-two: rgb(56, 1, 56);
   --image-background: url('/images/purpleTile.png');
   --play-circle: url('/images/play_circle_black.png');
-  --bg-size: 40% 40%;
+  --bg-size: 600px 600px;
   --text-color: black;
 }
 
@@ -105,7 +105,7 @@
   --image-background: url('/images/greyTile.png');
   --play-circle: url('/images/play_circle_grey.png');
   --chapter-background: url('/images/stonewallTexture1.png');
-  --bg-size: 50% 50%;
+  --bg-size: 600px 600px;
   --bg-size2: 30% auto;
   --text-color: #A4592A;;
   --hover-color: #8B4513;

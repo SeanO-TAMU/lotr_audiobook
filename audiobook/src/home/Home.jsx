@@ -1,11 +1,37 @@
 import styles from "./Home.module.css";
 import {Link} from "react-router-dom";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {titleText, chapText} from '../helper.js';
 
  
 
 function Home (){
+
+    const [quotes, setQuotes] = useState([]);
+    const [poems, setPoems] = useState([]);
+
+    const today = new Date();
+    let quoteDay = (today.getDate() - 1) % 35;
+    let poemDay = (today.getDate() - 1) % 21;
+
+    useEffect(() => {
+
+        fetch('http://localhost:5000/poems')
+        .then(res => res.json())
+        .then(data => {
+            setPoems(data);
+        })
+
+        fetch('http://localhost:5000/quotes')
+        .then(res => res.json())
+        .then(data => {
+            setQuotes(data);
+        })
+
+    }, []);
+
+
+    const lines = poems[poemDay]?.poem.split('\n') || [];
 
 
     return (
@@ -55,12 +81,32 @@ function Home (){
             <div className={styles.OfTheDay}> 
                 <div className={styles.Quote}>
                     <h2>Quote oF The Day</h2>
-                    <p>"There is some good in this world, and its worth fighting for."</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- J.R.R. Tolkien</p>
+                    {quotes && quotes[quoteDay] ? (
+                      <>
+                        <p>"{quotes[quoteDay].quote}"</p>
+                        <p className={styles.quoteAuthor}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- {quotes[quoteDay].author}</p>
+                      </>
+                      ) : (
+                      <p>Loading quote...</p>
+                    )}
                 </div>
                 <div className={styles.Poem}>
                     <h2>Poem oF The Day</h2>
-                    <p>All that is gold does not glitter, <br /> Not all those who wander are lost; <br /> The old that is strong does not wither, <br /> Deep roots are not reached by the frost. <br /> From the ashes a fire shall be woken, <br /> A light from the shadows shall spring; <br /> Renewed shall be blade that was broken, <br /> The crownless again shall be king.</p>
+                    {poems && poems[poemDay] ? (
+                      <>
+                        {lines.map((line, i) => {
+                            if (line == ' s '){
+                                return <p className={styles.poemSpace} key={i}>&nbsp;</p>
+                            }
+                            else{
+                                return <p className={styles.poemLine} key={i}>{line}</p>
+                            }
+                        })}
+                        <p className={styles.poemAuthor}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- {poems[poemDay].author}</p>
+                      </>
+                      ) : (
+                      <p>Loading poem...</p>
+                    )}
                 </div>
             </div>
         </>

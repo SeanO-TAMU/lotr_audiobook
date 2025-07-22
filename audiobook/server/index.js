@@ -237,6 +237,26 @@ app.get("/bookTheme", async (req, res) => {
   res.json(themeOBJ);
 });
 
+app.get("/quotes", async (req, res) => {
+
+  let filePath = path.join(__dirname, '\quotes.json');
+
+  const quoteList = await (fs.promises.readFile(filePath, 'utf8'));
+  const quotes = JSON.parse(quoteList);
+
+  res.json(quotes);
+});
+
+app.get("/poems", async (req, res) => {
+  
+  let filePath = path.join(__dirname, '\poems.json');
+
+  const poemList = await (fs.promises.readFile(filePath, 'utf8'));
+  const poems = JSON.parse(poemList);
+
+  res.json(poems);
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

@@ -436,12 +436,23 @@ text-shadow:
     background: linear-gradient(to left, #FFBF00, #FF5C00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 5px;
+    line-height: 1.8;
+    margin: 3px;
     /* font-family: 'CustomFont2', sans-serif; */
 }
 
+.quoteAuthor{
+    background: linear-gradient(to top, #FFBF00, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.8;
+    font-size: 25px;
+    margin: 10px;
+}
+
+
 .Poem{
-    max-width: 40%;
+    max-width: 45%;
     text-align: center;
     border: 3px solid #ffc300;
     box-shadow:
@@ -460,6 +471,7 @@ text-shadow:
         0 0 6px #ff4500,
         0 0 12px #dc143c,
         0 0 24px #800000;
+    text-align: left;
 }
 
 .Poem h2 {
@@ -472,13 +484,29 @@ text-shadow:
     margin-right: 10px;
     padding-bottom: 5px;
     font-size: 35px;
+    text-align: center;
 }
 
-.Poem p {
+.poemLine {
     /* font-family: 'CustomFont2', sans-serif; */
     background: linear-gradient(to top, #FFBF00, #FF5C00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1.8;
     font-size: 25px;
+    margin: 3px;
 }
+
+.poemSpace{
+    margin: 3px;
+}
+
+.poemAuthor{
+    background: linear-gradient(to top, #FFBF00, #FF5C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.8;
+    font-size: 25px;
+    margin: 10px;
+}
+

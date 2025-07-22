@@ -7,7 +7,7 @@
 
 [data-theme="lava"]{
   --image-background: url('/images/lava.jpg');
-  --bg-size: 50% 50%;
+  --bg-size: 600px 600px;
   --gradient-one: #3E1F1C;
   --gradient-two: #FF5C00;
 }
@@ -31,12 +31,12 @@
   --gradient-one: black;
   --gradient-two: black;
   --image-background: url('/images/starry5.jpeg');
-  --bg-size: 90% 90%;
+  --bg-size: 100% 100%;
 }
 
 [data-theme="castle"]{
 --image-background: url('/images/stonewall.jpg');
---bg-size: 100% 100%;
+--bg-size: 1300px 1300px;
 --gradient-one: #686868;
 --gradient-two: #3b3b3b;
 }

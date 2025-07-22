@@ -29,7 +29,7 @@ function Credit(){
          <div className={styles.tolkien}>
             <h2>Thanks to Beren</h2>
             <p>
-                And lastly, I want to express my deepest gratitude to Professor J.R.R. Tolkien, whose extraordinary imagination and dedication gave the world the rich and timeless mythology of Middle-earth. His stories are more than tales of adventure—they are works of profound beauty, language, and lore that continue to inspire awe and wonder across generations. This project would not exist without the foundation he laid through The Hobbit, The Lord of the Rings, and The Silmarillion. Thank you, Professor Tolkien, for crafting a world so vivid and enduring that it feels as real as our own—and for inviting us all to journey there.
+                And lastly, I want to express my deepest gratitude to Professor J.R.R. Tolkien, whose extraordinary imagination and dedication gave the world the rich and timeless mythology of Middle-earth. His stories are more than tales of adventure—they are works of profound beauty, language, and lore that continue to inspire awe and wonder across generations. This project would not exist without the foundation he laid through The Hobbit, The Lord of the Rings, and The Silmarillion. Thank you, Professor Tolkien, for crafting a world so vivid and enduring that it feels as real as our own—and for inviting us all to journey there. Aurë entuluva!
             </p>
          </div>
         </div>

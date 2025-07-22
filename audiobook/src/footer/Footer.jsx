@@ -8,8 +8,6 @@ function Footer(){
         <footer className={styles.footer}>
             <div className={styles.footSectioning}>
                     <div className={styles.top}>
-                        <p>&copy; 2025 Sean O'Connor. This is a fan site. All Tolkien-related characters and content belong to their respective copyright holders.</p>
-                        <p>Mea govannen!</p>
                     </div>
                 <div className={styles.footSection}>
                     <div className={styles.Symbol}>
@@ -42,6 +40,7 @@ function Footer(){
                         <a href = "https://www.theonering.net/">TheOneRing.net</a>
                     </div>
                 </div>
+                 <p className={styles.copyright}>&copy; 2025 Sean O'Connor. This is a fan site. All Tolkien-related characters and content belong to their respective copyright holders.</p>
             </div>
         </footer>
     );

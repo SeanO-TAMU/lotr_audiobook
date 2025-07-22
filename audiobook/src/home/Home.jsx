@@ -2,6 +2,7 @@ import styles from "./Home.module.css";
 import {Link} from "react-router-dom";
 import { useEffect, useState } from 'react';
 import {titleText, chapText} from '../helper.js';
+import Popup from "../welcome/Popup";
 
  
 
@@ -9,6 +10,7 @@ function Home (){
 
     const [quotes, setQuotes] = useState([]);
     const [poems, setPoems] = useState([]);
+    const [showPopup, setShowPopup] = useState(false);
 
     const today = new Date();
     let quoteDay = (today.getDate() - 1) % 35;
@@ -28,14 +30,25 @@ function Home (){
             setQuotes(data);
         })
 
+        const seenPopup = sessionStorage.getItem("seenWelcome");
+        if (!seenPopup) {
+            setShowPopup(true); 
+            sessionStorage.setItem("seenWelcome", "true"); 
+        }
+
     }, []);
 
 
     const lines = poems[poemDay]?.poem.split('\n') || [];
 
+    const handleClose = () => {
+        setShowPopup(false);
+    };
+
 
     return (
         <>
+            {showPopup && <Popup onClose={handleClose} />}
             <div className={styles.Title}>
                 <h1>The One Audiobook Library to Rule Them All</h1>
                 <Link to="/books" className={styles.linkNoUnder}><p>A Journey Through Middle-Earth in Audiobook Form</p></Link>
@@ -105,7 +118,7 @@ function Home (){
                         <p className={styles.poemAuthor}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- {poems[poemDay].author}</p>
                       </>
                       ) : (
-                      <p>Loading poem...</p>
+                      <p className={styles.poemLine}>Loading poem...</p>
                     )}
                 </div>
             </div>

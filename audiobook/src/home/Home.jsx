@@ -51,13 +51,13 @@ function Home (){
             {showPopup && <Popup onClose={handleClose} />}
             <div className={styles.Title}>
                 <h1>The One Audiobook Library to Rule Them All</h1>
-                <Link to="/books" className={styles.linkNoUnder}><p>A Journey Through Middle-Earth in Audiobook Form</p></Link>
+                <Link to="/books" className={styles.linkNoUnder}><p>A Journey Through Middle-earth in Audiobook Form</p></Link>
             </div>
             <div className={styles.CTADiv}>
                 <div className={styles.CTA}>
                     {/* could add a rotating image next to this of each book in the library that can be clicked to take you to that book
                             the call to action can go on the left side */}
-                    <h2>Embark on a Journey Through Middle-Earth</h2>
+                    <h2>Embark on a Journey Through Middle-earth</h2>
                     {/* <hr></hr> */}
                     <p>Dive into the world of J.R.R. Tolkien’s timeless masterpieces, from The Hobbit to The Lord of the Rings and more, all in audiobook form.</p>
                     {/* <Link to="/books">Books</Link> */}
@@ -83,7 +83,7 @@ function Home (){
                     </div></Link>
                     <Link to="/books" className={styles.NoLinkStyle2}><div className={styles.Book2}>
                         <h3>The Lord of the Rings Trilogy</h3>
-                        <p>The epic journey to destroy the One Ring, filled with heroes, battles, and the fate of Middle-Earth itself.</p>
+                        <p>The epic journey to destroy the One Ring, filled with heroes, battles, and the fate of Middle-earth itself.</p>
                     </div></Link>
                     <Link to="/books" className={styles.NoLinkStyle3}><div className={styles.Book3}>
                         <h3>The Silmarillion</h3>

@@ -3,7 +3,7 @@ import {chapText} from "../../../helper.js";
 
 function Audio({ title, chapter, onClose }) {
 
-    let audioString = "http://localhost:5000/chapter?title=" + title + "&chapter=" + chapter;
+    let audioString = "http://localhost:5000/chapter?title=" + encodeURIComponent(title) + "&chapter=" + encodeURIComponent(chapter);
 
     // console.log("Title: ", title);
     // console.log("Chapter: ", chapter);

@@ -23,7 +23,7 @@ function Credit(){
          <div className={styles.art}>
             <h2>The Vision of Middle-earth</h2>
             <p>
-                I’d like to sincerely thank the many talented artists whose incredible work made this project more visually engaging and immersive. Special thanks to [Artist Name 1], [Artist Name 2], and [Artist Name 3]—your artwork added so much character and atmosphere to the app. I also want to acknowledge [Artist Name 4] and [Artist Name 5] for sharing your creations online for others to enjoy. This project wouldn’t be the same without your contributions, and I’m deeply grateful for the inspiration and generosity you’ve shared through your art.
+                I’d like to sincerely thank the many talented artists whose incredible work made this project more visually engaging and immersive. Special thanks to Karl Fitzgerald, Ted Nasmith, and Alan Lee. Your artwork added so much character and atmosphere to the app. I also want to acknowledge John Howe and Tim Schaser for sharing your creations online for others to enjoy. This project wouldn’t be the same without your contributions, and I’m deeply grateful for the inspiration and generosity you’ve shared through your art.
             </p>
          </div>
          <div className={styles.tolkien}>

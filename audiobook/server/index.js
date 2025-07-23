@@ -23,20 +23,23 @@ async function retrieveBooks(){
 async function retrieveChapters(book){
   let chapters = [];
   let filePath = path.join(path.dirname(__dirname), '/library'); //path to the library  
-  filePath = path.join(filePath, book); //path to the book
+  filePath = path.join(filePath, book, "/chapters"); //path to the book
 
   const files = await fs.promises.readdir(filePath);
   for(let i = 0; i < files.length; i++){
     let filename = path.join(filePath, files[i]);
     let fileLoc = await fs.promises.stat(filename);
 
-    if(!fileLoc.isDirectory()){ // if it is a directory don't add
-      chapters.push(files[i]);
-      //console.log("Chapter: ", files[i]);
-    }
-    else {
-      continue;
-    }
+    chapters.push(files[i]);
+
+
+
+    // if(!fileLoc.isDirectory() && path.extname(files[i]) === ".mp3"){ // if it is a directory don't add
+    //   chapters.push(files[i]);
+    // }
+    // else {
+    //   continue;
+    // }
 
   }
 
@@ -83,6 +86,9 @@ app.use((req, res, next) => {
   console.log("Path: ", req.path);
   console.log("URL: ", req.url);
   console.log("Method: ", req.method);
+
+  const filePath = path.join(path.dirname(__dirname), 'library', 'the_fellowship_of_the_ring', 'chapters', '01_A_Long_Expected_Party', '01_A_Long_Expected_Party.mp3');
+  console.log(fs.existsSync(filePath));
 
 
   next();
@@ -187,7 +193,9 @@ app.get("/chapter", (req, res) => {
   const book = req.query.title;
   const chapter = req.query.chapter;
 
-  const filePath = path.join(path.dirname(__dirname), '/library', book, chapter);
+  console.log("AudioString Chapter: ", chapter);
+
+  const filePath = path.join(path.dirname(__dirname), 'library', book, 'chapters', chapter, chapter + '.mp3');
 
   const CHUNKSIZE = 500 * 1e3;
 
@@ -266,13 +274,3 @@ app.listen(PORT, () => {
   console.log("Directory Name: ", __dirname);
   console.log(path1);
 });
-
-//need to use streams to load these mp3 so that we can start using them before they are fully loaded
-fs.readFile('./library/the_fellowship_of_the_ring/01_A_Long_Expected_Party.mp3', (err, data) => {
-  if (err){
-      console.log(err);
-  }
-  else{
-      console.log(data.length);
-  }
-})

@@ -31,15 +31,22 @@ async function retrieveChapters(book){
     let fileLoc = await fs.promises.stat(filename);
 
     chapters.push(files[i]);
-
-
-
+    
     // if(!fileLoc.isDirectory() && path.extname(files[i]) === ".mp3"){ // if it is a directory don't add
     //   chapters.push(files[i]);
     // }
     // else {
     //   continue;
     // }
+
+
+
+    if(!fileLoc.isDirectory() && path.extname(files[i]) === ".mp3"){ // if it is a directory don't add
+      chapters.push(files[i]);
+    }
+    else {
+      continue;
+    }
 
   }
 

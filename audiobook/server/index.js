@@ -202,7 +202,7 @@ app.get("/chapter", (req, res) => {
 
   console.log("AudioString Chapter: ", chapter);
 
-  const filePath = path.join(path.dirname(__dirname), 'library', book, 'chapters', chapter, chapter + '.mp3');
+  const filePath = path.join(path.dirname(__dirname), 'library', book, 'chapters', chapter, 'audio', chapter + '.mp3');
 
   const CHUNKSIZE = 500 * 1e3;
 

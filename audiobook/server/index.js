@@ -272,6 +272,25 @@ app.get("/poems", async (req, res) => {
   res.json(poems);
 });
 
+app.get("/chapterImages", async (req, res) => {
+
+  const book = req.query.title;
+  const chapter = req.query.chapter;
+  
+  const imageFilePath = path.join(path.dirname(__dirname), 'library', book, 'chapters', chapter, 'images');
+
+  const folders = await fs.promises.readdir(imageFilePath);
+  let images = [];
+
+  for(let i = 0; i < folders.length; i++){
+    let imageFiles = await fs.promises.readdir(path.join(imageFilePath, folders[i]));
+    images[i] = imageFiles.map(file => path.join(folders[i], file));
+  }
+
+  res.json(images);
+
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

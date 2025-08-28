@@ -7,6 +7,7 @@
 
 .pageBackground {
   width: 100%;
+  min-height: 100vh;
   background: linear-gradient(to bottom, #24252A, black);
   position: relative;
   overflow: hidden;
@@ -17,9 +18,9 @@
   flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
-  width: 80%; /* Adjust width as needed */
+  width: 80vw; /* Adjust width as needed */
   height: 100%;
-  max-width: 1200px; /* Maximum width to prevent it from growing too wide */
+  /* max-width: 1200px; */
   margin: 0 auto; /* Centers the wrapper horizontally */
   background-color: black;
   background-image: var(--image-background, linear-gradient(to bottom, var(--gradient-one), var(--gradient-two)));

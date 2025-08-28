@@ -2,7 +2,7 @@ import styles from "./Audio.module.css";
 import {chapText} from "../../../helper.js";
 import {useState, useEffect} from "react";
 
-function Audio({ title, chapter, onClose }) {
+function Audio({ title, chapter, onClose, onAudioEnd}) {
 
     const [images, setImages] = useState([]);
     const [imageNum, setImageNum] = useState(0);
@@ -54,19 +54,50 @@ function Audio({ title, chapter, onClose }) {
       }
     }, [imageModulus, folderNum, images]);
 
+    useEffect(() => {
+      const audio = document.getElementById("chapAudio");
+
+      if (!audio) return;
+
+      audio.load();
+
+      function handleEnd() {
+          console.log("Audio file has ended");
+          onAudioEnd(); // Just call the callback, let parent decide what to do
+      }
+
+      function timeUpdate(){
+        console.log("Current Time: ", audio.currentTime);
+      }
+
+      audio.addEventListener("ended", handleEnd);
+
+      audio.addEventListener("timeupdate", timeUpdate);
+
+      audio.play().catch(console.error);
+
+      return () => {
+        audio.removeEventListener("timeupdate", timeUpdate);
+        audio.removeEventListener("ended", handleEnd);
+      };
+
+    }, [onAudioEnd, chapter]);
+
+
+    /// when I play the next browser I need to close the current audio tab and then call the next chapter function
   return (
     <div className={styles.popupOverlay}  onClick={onClose}>
       <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
         <img className={styles.closeIcon} src="/images/closeIcon.png" onClick={onClose}></img>
         <div className={styles.imgDiv}>
-          {images.length === 0 && <img src="/images/lotr_logo.png"></img>}
-          {images.length > 0 && images[folderNum] && (
+          {imageModulus === 0 && <img src="/images/lotr_logo.png"></img>}
+          {imageModulus > 0 && images[folderNum] && (
             <img id="chapterImage" className={styles.chapImage} src={`${imageString}${images[folderNum][imageNum]}`} />
           )}
         </div>
         
         <p>{chapText(chapter)}</p>
-        <audio controls className={styles.audio}>
+        <audio id="chapAudio" controls className={styles.audio}>
             <source src={audioString} type="audio/mpeg" />
             Your browser does not support the audio element.
         </audio>

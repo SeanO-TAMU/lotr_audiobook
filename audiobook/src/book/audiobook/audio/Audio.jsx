@@ -6,6 +6,7 @@ import NextChapter from "./nextChapter/NextChapter.jsx";
 function Audio({ title, chapter, onClose, onAudioEnd}) {
 
     const [images, setImages] = useState([]);
+    const [times, setTimes] = useState([]);
     const [imageNum, setImageNum] = useState(0);
     const [folderNum, setFolderNum] = useState(0);
     const [imageModulus, setImageModulus] = useState(0);
@@ -22,6 +23,12 @@ function Audio({ title, chapter, onClose, onAudioEnd}) {
             console.log("Fetched images: ", data);
 
         })
+        fetch(`http://localhost:5000/chapterTime?title=${encodeURIComponent(title)}&chapter=${encodeURIComponent(chapter)}`)
+          .then(res => res.json())
+          .then(data => {
+            setTimes(data);
+            console.log("Fetched times, ", data);
+          })
     }, [title, chapter]);
 
     useEffect(() => {
@@ -87,7 +94,6 @@ function Audio({ title, chapter, onClose, onAudioEnd}) {
     }, [onAudioEnd, chapter]);
 
 
-    /// when I play the next browser I need to close the current audio tab and then call the next chapter function
   return (
     <div className={styles.popupOverlay}  onClick={onClose}>
       <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>

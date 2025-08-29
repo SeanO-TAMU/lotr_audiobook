@@ -1,6 +1,7 @@
 import styles from "./Audio.module.css";
 import {chapText} from "../../../helper.js";
 import {useState, useEffect} from "react";
+import NextChapter from "./nextChapter/NextChapter.jsx";
 
 function Audio({ title, chapter, onClose, onAudioEnd}) {
 
@@ -9,6 +10,7 @@ function Audio({ title, chapter, onClose, onAudioEnd}) {
     const [folderNum, setFolderNum] = useState(0);
     const [imageModulus, setImageModulus] = useState(0);
     const [folderModulus, setFolderModulus] = useState(0);
+    const [showPopup, setShowPopup] = useState(false); // variable to control the next chapter timer popup
 
     let audioString = "http://localhost:5000/chapter?title=" + encodeURIComponent(title) + "&chapter=" + encodeURIComponent(chapter);
 
@@ -63,7 +65,8 @@ function Audio({ title, chapter, onClose, onAudioEnd}) {
 
       function handleEnd() {
           console.log("Audio file has ended");
-          onAudioEnd(); // Just call the callback, let parent decide what to do
+          // onAudioEnd(); // Just call the callback, let parent decide what to do
+          setShowPopup(true);
       }
 
       function timeUpdate(){
@@ -101,6 +104,9 @@ function Audio({ title, chapter, onClose, onAudioEnd}) {
             <source src={audioString} type="audio/mpeg" />
             Your browser does not support the audio element.
         </audio>
+        {showPopup && ( // how would I get this to close when onAudioEnd runs?
+          <NextChapter onAudioEnding={() => {setShowPopup(false); onAudioEnd();}} onClosePopup={() => setShowPopup(false)}></NextChapter>
+        )}
       </div>
     </div>
   );

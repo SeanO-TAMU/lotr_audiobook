@@ -72,26 +72,51 @@ function Audio({ title, chapter, onClose, onAudioEnd}) {
 
       function handleEnd() {
           console.log("Audio file has ended");
-          // onAudioEnd(); // Just call the callback, let parent decide what to do
           setShowPopup(true);
-      }
-
-      function timeUpdate(){
-        console.log("Current Time: ", audio.currentTime);
       }
 
       audio.addEventListener("ended", handleEnd);
 
-      audio.addEventListener("timeupdate", timeUpdate);
-
       audio.play().catch(console.error);
 
       return () => {
-        audio.removeEventListener("timeupdate", timeUpdate);
         audio.removeEventListener("ended", handleEnd);
       };
 
-    }, [onAudioEnd, chapter]);
+    }, [chapter]); //ig don't need onAudioEnd as dependency here since it is not used in this useEffect
+
+    useEffect(() => {
+      if(times.length === 0){
+        return;
+      }
+      const audio = document.getElementById("chapAudio");
+
+      if (!audio) return;
+
+      function timeUpdate(){
+        let time = audio.currentTime;
+        let newFolder = 0;
+        console.log("Current Time: ", time);
+        console.log("Time lists: ", times);
+
+        for(let i = 0; i < times.length; i++){
+          if(time >= times[i]){
+            newFolder = i + 1;//sets folderNum for scenes that fall in between stuff
+          }
+        }
+
+        if(newFolder != folderNum){
+          setFolderNum(newFolder);
+        }
+      }
+
+      audio.addEventListener("timeupdate", timeUpdate);
+
+      return () => {
+        audio.removeEventListener("timeupdate", timeUpdate);
+      };
+
+    }, [times, folderNum]);
 
 
   return (
@@ -101,7 +126,7 @@ function Audio({ title, chapter, onClose, onAudioEnd}) {
         <div className={styles.imgDiv}>
           {imageModulus === 0 && <img src="/images/lotr_logo.png"></img>}
           {imageModulus > 0 && images[folderNum] && (
-            <img id="chapterImage" className={styles.chapImage} src={`${imageString}${images[folderNum][imageNum]}`} />
+            <img id="chapterImage"  key={`${folderNum}-${imageNum}`} className={styles.chapImage} src={`${imageString}${images[folderNum][imageNum]}`} />
           )}
         </div>
         

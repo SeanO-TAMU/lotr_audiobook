@@ -126,7 +126,10 @@ function Audio({ title, chapter, onClose, onAudioEnd}) {
         <div className={styles.imgDiv}>
           {imageModulus === 0 && <img src="/images/lotr_logo.png"></img>}
           {imageModulus > 0 && images[folderNum] && (
-            <img id="chapterImage"  key={`${folderNum}-${imageNum}`} className={styles.chapImage} src={`${imageString}${images[folderNum][imageNum]}`} />
+            <img id="chapterImage"  
+            key={`${folderNum}-${imageNum}`} 
+            className={imageModulus > 1 ? styles.chapImage: ""}
+            src={`${imageString}${images[folderNum][imageNum]}`} /> //only apply chapImage style if number of images in file is greater than
           )}
         </div>
         

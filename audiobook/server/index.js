@@ -297,7 +297,13 @@ app.get("/chapterTime", async (req, res) => {
   const chapter = req.query.chapter;
   
   const dataFilePath = path.join(path.dirname(__dirname), 'library', book, 'chapters', chapter, 'data', 'time.json');
-  const jsonData = await fs.promises.readFile(dataFilePath, 'utf-8');  //need something here to handle if time file doesn't exist
+  let jsonData;
+  try{
+    jsonData = await fs.promises.readFile(dataFilePath, 'utf-8');
+  }
+  catch{
+    return res.json([]);
+  }  //need something here to handle if time file doesn't exist
   
   let parsedData = JSON.parse(jsonData);
   let times = parsedData.times;

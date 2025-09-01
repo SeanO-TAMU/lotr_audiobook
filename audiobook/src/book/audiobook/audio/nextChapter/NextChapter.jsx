@@ -10,7 +10,7 @@ function NextChapter({onAudioEnding, onClosePopup}){
         const intervalId = setInterval(() => {
             setCountdown(prev => {
                 if (prev <= 1) {
-                    // onAudioEnding();
+                    onAudioEnding();
                     return 0;
                 }
                 return prev - 1;

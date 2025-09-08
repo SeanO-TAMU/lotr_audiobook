@@ -119,3 +119,9 @@
   --text-color: white;
 }
 
+[data-theme="white"]{
+  --gradient-one: white;
+  --gradient-two: white;
+  --text-color: black;
+}
+

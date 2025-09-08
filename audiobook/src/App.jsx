@@ -109,7 +109,7 @@ function AppWrapper() {
       theme = 'nightsky';
   }
     else if (pathname.startsWith("/test")){
-      theme = 'navy';
+      theme = "white";
     }
     else if (pathname.startsWith("/credit")){
       theme = 'stars'

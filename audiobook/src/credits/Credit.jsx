@@ -5,6 +5,8 @@ function Credit(){
     //// Can make the text animated (oscillate between glowing a lot to a little), can also make it randomized between different elements to make it look like stars twinkling
     ///// Can also animate a star to do the above as well in one of the emtpy spaces
     //// Maybe animate random shooting stars every once in a while?
+
+    //sergio castenadas
     return(
         <div className={styles.credit}>
          <h1>The Heart Behind the Journey</h1>

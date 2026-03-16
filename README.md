@@ -1,1 +1,2 @@
-Downloads may be limited since I use a free tier of git lfs (only 10GB bandwith per month)
+- Downloads may be limited since I use a free tier of git lfs (only 10GB bandwith per month)
+- Also The Hobbit and Silmarillion books currently do not have audio files so clicking on the books won't pull up any of the chapters
